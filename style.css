@@ -60,30 +60,24 @@ body {
     --white: #ffffff;
 
     /* Layout */
-    --max-width: 700px;
+    --max-width: 1000px;
 
     /* Animation */
     --transition: 0.2s ease;
 
     /*
-     * Desktop book geometry.
-     *
-     * Overlay starts after:
-     * card padding
-     * + cover width
-     * + cover margin
-     * + desired gap
+     * Compact desktop book geometry.
      */
-    --card-padding: 22px;
-    --book-cover-width: 105px;
-    --book-cover-gap: 22px;
-    --overlay-gap: 5px;
+    --card-padding: 16px;
+    --book-cover-width: 80px;
+    --book-cover-gap: 16px;
+    --overlay-gap: 4px;
 
     /*
      * How far the desktop overlay extends
      * beyond the top and bottom of the card.
      */
-    --overlay-vertical-overlap: 8px;
+    --overlay-vertical-overlap: 6px;
 }
 
 
@@ -106,7 +100,7 @@ body {
     max-width: var(--max-width);
 
     margin: 0 auto;
-    padding: 18px 0;
+    padding: 14px 0;
 
     display: flex;
     align-items: center;
@@ -148,7 +142,7 @@ body {
         "Times New Roman",
         serif;
 
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     line-height: 1.1;
 
@@ -166,7 +160,7 @@ body {
         "Times New Roman",
         serif;
 
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.2;
 }
 
@@ -178,7 +172,7 @@ body {
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 22px;
 }
 
 .main-nav a {
@@ -188,7 +182,7 @@ body {
 
     color: var(--blue);
 
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700;
 
     text-decoration: none;
@@ -219,14 +213,14 @@ body {
     width: 100%;
     max-width: none;
 
-    margin-top: 10px;
-    margin-bottom: 35px;
+    margin-top: 8px;
+    margin-bottom: 28px;
 }
 
 .intro-text h1 {
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
@@ -242,9 +236,9 @@ body {
         Helvetica,
         sans-serif;
 
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     font-weight: 400;
-    line-height: 1.8;
+    line-height: 1.65;
 
     text-align: justify;
 }
@@ -273,7 +267,7 @@ body {
     max-width: var(--max-width);
 
     margin: 0 auto;
-    padding-top: 25px;
+    padding-top: 18px;
 
     flex: 1;
 }
@@ -284,8 +278,8 @@ body {
 ========================================= */
 
 .filters {
-    margin-bottom: 35px;
-    padding: 18px 20px;
+    margin-bottom: 28px;
+    padding: 15px 17px;
 
     background: var(--white);
 
@@ -294,7 +288,7 @@ body {
 }
 
 .filter-group h2 {
-    margin: 0 0 13px;
+    margin: 0 0 11px;
 
     color: var(--blue);
 
@@ -303,7 +297,7 @@ body {
         "Times New Roman",
         serif;
 
-    font-size: 17px;
+    font-size: 16px;
 }
 
 
@@ -318,15 +312,15 @@ body {
 }
 
 .filter-buttons {
-    gap: 7px;
-}
-
-.subcategory-buttons {
     gap: 6px;
 }
 
+.subcategory-buttons {
+    gap: 5px;
+}
+
 .filter {
-    padding: 6px 13px;
+    padding: 5px 11px;
 
     border: 1px solid var(--border-light);
     border-radius: 4px;
@@ -339,7 +333,7 @@ body {
         Helvetica,
         sans-serif;
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.45;
 
@@ -382,13 +376,13 @@ body {
 .category-main {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
+    gap: 6px;
 }
 
 .submenu-arrow {
     display: inline-block;
 
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1;
 
     transition: transform var(--transition);
@@ -406,8 +400,8 @@ body {
 .subcategory-wrapper {
     display: none;
 
-    margin-top: 15px;
-    padding: 15px 16px;
+    margin-top: 13px;
+    padding: 13px 14px;
 
     background: #f8fafb;
 
@@ -421,7 +415,7 @@ body {
 }
 
 .subcategory-heading {
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 
     color: var(--blue);
 
@@ -430,7 +424,7 @@ body {
         "Times New Roman",
         serif;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
 }
 
@@ -451,16 +445,16 @@ body {
 ========================================= */
 
 .books-section {
-    padding-bottom: 70px;
+    padding-bottom: 60px;
 }
 
 .section-heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 18px;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 
@@ -477,11 +471,11 @@ body {
 }
 
 .section-title {
-    gap: 12px;
+    gap: 10px;
 }
 
 .section-heading-left {
-    gap: 14px;
+    gap: 12px;
 }
 
 .section-heading h2 {
@@ -494,13 +488,13 @@ body {
         "Times New Roman",
         serif;
 
-    font-size: 26px;
+    font-size: 23px;
 }
 
 .book-count {
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 13px;
 
     white-space: nowrap;
 }
@@ -513,7 +507,7 @@ body {
 .section-heading-right {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .search-box {
@@ -524,16 +518,16 @@ body {
 }
 
 #bookSearch {
-    width: 220px;
-    height: 42px;
+    width: 190px;
+    height: 38px;
 
-    padding: 0 38px 0 14px;
+    padding: 0 34px 0 12px;
 
     border: 1px solid #ccc;
     border-radius: 4px;
 
     font-family: inherit;
-    font-size: 15px;
+    font-size: 13px;
 
     outline: none;
 }
@@ -544,7 +538,7 @@ body {
 
 #clearSearch {
     position: absolute;
-    right: 8px;
+    right: 7px;
 
     display: none;
 
@@ -555,7 +549,7 @@ body {
 
     color: #777;
 
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1;
 
     cursor: pointer;
@@ -574,11 +568,11 @@ body {
 }
 
 .sort-label {
-    margin-right: 4px;
+    margin-right: 3px;
 
     color: var(--muted);
 
-    font-size: 13px;
+    font-size: 12px;
 
     white-space: nowrap;
 }
@@ -586,9 +580,9 @@ body {
 .sort-button {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
+    gap: 6px;
 
-    padding: 5px 11px;
+    padding: 4px 10px;
 
     border: 1px solid var(--border-light);
     border-radius: 4px;
@@ -601,7 +595,7 @@ body {
         Helvetica,
         sans-serif;
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.45;
 
@@ -629,7 +623,7 @@ body {
 .sort-arrow {
     color: var(--gold);
 
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1;
 }
 
@@ -644,7 +638,7 @@ body {
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
-    gap: 24px;
+    gap: 18px;
 
     align-items: stretch;
 }
@@ -676,7 +670,7 @@ body {
 
     width: 100%;
     min-width: 0;
-    min-height: 220px;
+    min-height: 190px;
 
     padding: var(--card-padding);
 
@@ -705,8 +699,8 @@ body {
     content: "";
 
     position: absolute;
-    top: 18px;
-    bottom: 18px;
+    top: 16px;
+    bottom: 16px;
     left: 0;
 
     width: 3px;
@@ -723,7 +717,7 @@ body {
 
 .book-icon {
     width: var(--book-cover-width);
-    height: 140px;
+    height: 115px;
 
     flex: 0 0 var(--book-cover-width);
 
@@ -741,7 +735,7 @@ body {
 
     border-radius: 5px;
 
-    font-size: 21px;
+    font-size: 18px;
 }
 
 .book-icon img {
@@ -764,21 +758,21 @@ body {
 
     flex: 1 1 auto;
 
-    padding-right: 30px;
+    padding-right: 24px;
 }
 
 .book-series {
-    margin: 0 0 9px;
+    margin: 0 0 7px;
 
     color: var(--gold);
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     line-height: 1.4;
 }
 
 .book-content h3 {
-    margin: 0 0 9px;
+    margin: 0 0 7px;
 
     color: var(--blue);
 
@@ -787,28 +781,28 @@ body {
         "Times New Roman",
         serif;
 
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
-    line-height: 1.45;
+    line-height: 1.4;
 
     overflow-wrap: break-word;
 }
 
 .book-content p:not(.book-series) {
-    margin: 6px 0 0;
+    margin: 5px 0 0;
 
     color: var(--muted);
 
-    font-size: 12px;
-    line-height: 1.5;
+    font-size: 11px;
+    line-height: 1.45;
 }
 
 .book-author {
     color: #3f4d54 !important;
 
-    font-size: 13px !important;
+    font-size: 12px !important;
     font-weight: 500;
-    line-height: 1.45;
+    line-height: 1.4;
 
     overflow-wrap: break-word;
 }
@@ -820,12 +814,12 @@ body {
 
 .arrow {
     position: absolute;
-    right: 18px;
-    bottom: 17px;
+    right: 15px;
+    bottom: 14px;
 
     color: var(--gold);
 
-    font-size: 20px;
+    font-size: 18px;
 
     opacity: 0;
 
@@ -897,11 +891,7 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
 
-    /*
-     * Keep the text a consistent distance
-     * from the book cover.
-     */
-    padding: 20px 20px 20px 12px;
+    padding: 16px 16px 16px 10px;
 
     background: var(--white);
 
@@ -930,7 +920,6 @@ body {
         #b9c8d1
         transparent;
 }
-
 
 
 /* =========================================
@@ -978,7 +967,7 @@ body {
 ========================================= */
 
 .book-overlay h3 {
-    margin: 0 0 12px;
+    margin: 0 0 10px;
 
     color: var(--blue);
 
@@ -987,7 +976,7 @@ body {
         "Times New Roman",
         serif;
 
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.35;
 
@@ -995,12 +984,12 @@ body {
 }
 
 .book-overlay p {
-    margin: 0 0 16px;
+    margin: 0 0 14px;
 
     color: #555;
 
-    font-size: 12px;
-    line-height: 1.3;
+    font-size: 11px;
+    line-height: 1.45;
 
     text-align: justify;
 }
@@ -1010,7 +999,7 @@ body {
 
     color: var(--blue);
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
 
     text-decoration: none;
@@ -1026,12 +1015,12 @@ body {
 ========================================= */
 
 footer {
-    padding: 30px 20px;
+    padding: 25px 20px;
 
     background: var(--white);
     color: var(--muted);
 
-    font-size: 13px;
+    font-size: 12px;
     text-align: center;
 }
 
@@ -1044,19 +1033,15 @@ footer p {
    TABLET
 ========================================= */
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
 
     :root {
         /*
          * Tablet card geometry.
-         *
-         * 20px card padding
-         * + 100px cover
-         * + 18px cover gap
          */
-        --card-padding: 20px;
-        --book-cover-width: 100px;
-        --book-cover-gap: 18px;
+        --card-padding: 18px;
+        --book-cover-width: 90px;
+        --book-cover-gap: 16px;
     }
 
 
@@ -1066,11 +1051,12 @@ footer p {
     }
 
     .book-icon {
-        height: 135px;
+        height: 125px;
     }
 
     .book-link {
         padding: var(--card-padding);
+        min-height: 200px;
     }
 
 }
@@ -1273,73 +1259,68 @@ footer p {
 
     /* -------------------------------------
        MOBILE OVERLAY
-       
-       The mobile overlay deliberately uses
-       percentage positioning because the
-       cover must remain visible.
     ------------------------------------- */
 
     .book-overlay {
-    top: 0;
-    right: 0;
-    bottom: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
 
-    left:
-        calc(
-            var(--card-padding) +
-            var(--book-cover-width) +
-            var(--book-cover-gap) +
-            6px
-        );
+        left:
+            calc(
+                var(--card-padding) +
+                var(--book-cover-width) +
+                var(--book-cover-gap) +
+                6px
+            );
 
-    width: auto;
-    height: auto;
+        width: auto;
+        height: auto;
 
-    max-width: none;
-    max-height: none;
+        max-width: none;
+        max-height: none;
 
-    margin: 0;
+        margin: 0;
 
-    padding: 18px 14px 18px 10px;
+        padding: 18px 14px 18px 10px;
 
-    background: var(--white);
+        background: var(--white);
 
-    border: 1px solid var(--border);
-    border-radius: 0 7px 7px 0;
+        border: 1px solid var(--border);
+        border-radius: 0 7px 7px 0;
 
-    box-shadow:
-        -5px 0 18px rgba(23, 63, 95, 0.10),
-        0 5px 20px rgba(23, 63, 95, 0.08);
+        box-shadow:
+            -5px 0 18px rgba(23, 63, 95, 0.10),
+            0 5px 20px rgba(23, 63, 95, 0.08);
 
-    overflow-y: auto;
-    overflow-x: hidden;
+        overflow-y: auto;
+        overflow-x: hidden;
 
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
 
-    transform: none;
+        transform: none;
 
-    transition:
-        opacity var(--transition),
-        visibility var(--transition);
+        transition:
+            opacity var(--transition),
+            visibility var(--transition);
 
-    z-index: 50;
-}
+        z-index: 50;
+    }
 
 
     /* -------------------------------------
        MOBILE OVERLAY OPEN STATE
     ------------------------------------- */
 
-.book-card.overlay-open .book-overlay {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+    .book-card.overlay-open .book-overlay {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
 
-    transform: none;
-}
-
+        transform: none;
+    }
 
 
     /* -------------------------------------
@@ -1533,28 +1514,28 @@ footer p {
     ------------------------------------- */
 
     .book-overlay {
-    left:
-        calc(
-            var(--card-padding) +
-            var(--book-cover-width) +
-            var(--book-cover-gap) +
-            5px
-        );
+        left:
+            calc(
+                var(--card-padding) +
+                var(--book-cover-width) +
+                var(--book-cover-gap) +
+                5px
+            );
 
-    padding: 16px 14px 16px 8px;
+        padding: 16px 14px 16px 8px;
 
-    border-radius: 0 7px 7px 0;
-}
+        border-radius: 0 7px 7px 0;
+    }
 
-.book-card.overlay-open .book-overlay {
-    left:
-        calc(
-            var(--card-padding) +
-            var(--book-cover-width) +
-            var(--book-cover-gap) +
-            5px
-        );
-}
+    .book-card.overlay-open .book-overlay {
+        left:
+            calc(
+                var(--card-padding) +
+                var(--book-cover-width) +
+                var(--book-cover-gap) +
+                5px
+            );
+    }
 
 
     .book-overlay h3 {
