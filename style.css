@@ -60,7 +60,7 @@ body {
     --white: #ffffff;
 
     /* Layout */
-    --max-width: 1100px;
+    --max-width: 900px;
 
     /* Animation */
     --transition: 0.2s ease;
