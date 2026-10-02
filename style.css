@@ -1,0 +1,1591 @@
+/* =========================================
+   RESET
+========================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--background);
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+    /* Colors */
+    --blue: #174a70;
+    --blue-dark: #103752;
+    --blue-light: #eaf1f5;
+
+    --gold: #b98a45;
+
+    --text: #27343b;
+    --muted: #6f7c83;
+
+    --border: #d9e0e4;
+    --border-light: #dfe4e7;
+    --border-hover: #b9c8d1;
+
+    --background: #f7f8f9;
+    --white: #ffffff;
+
+    /* Layout */
+    --max-width: 1600px;
+
+    /* Animation */
+    --transition: 0.2s ease;
+
+    /*
+     * Desktop book geometry.
+     *
+     * Overlay starts after:
+     * card padding
+     * + cover width
+     * + cover margin
+     * + desired gap
+     */
+    --card-padding: 22px;
+    --book-cover-width: 105px;
+    --book-cover-gap: 22px;
+    --overlay-gap: 5px;
+
+    /*
+     * How far the desktop overlay extends
+     * beyond the top and bottom of the card.
+     */
+    --overlay-vertical-overlap: 8px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header,
+.header-nav-row {
+    width: 100%;
+    background: var(--white);
+}
+
+.header-nav-row {
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+    width: calc(100% - 48px);
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+    padding: 18px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   HEADER IMAGE
+========================================= */
+
+.header-image {
+    display: block;
+
+    width: 100%;
+    height: 140px;
+
+    background: var(--white);
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    color: var(--blue);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+.brand-subtitle {
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.main-nav a {
+    display: inline-block;
+
+    padding: 0;
+
+    color: var(--blue);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color var(--transition);
+}
+
+.main-nav a:hover {
+    color: var(--gold);
+}
+
+.main-nav a:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+.main-nav a.active {
+    color: var(--blue);
+}
+
+
+/* =========================================
+   INTRO TEXT
+========================================= */
+
+.intro-text {
+    width: 100%;
+    max-width: none;
+
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.intro-text h1 {
+    margin-bottom: 18px;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.intro-text p {
+    width: 100%;
+
+    margin: 0 0 12px;
+
+    color: #444;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.8;
+
+    text-align: justify;
+}
+
+.intro-text a {
+    color: #000;
+
+    font-weight: 700;
+
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.intro-text a:hover {
+    color: #a67c32;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+    width: calc(100% - 48px);
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+    padding-top: 25px;
+
+    flex: 1;
+}
+
+
+/* =========================================
+   FILTERS
+========================================= */
+
+.filters {
+    margin-bottom: 35px;
+    padding: 18px 20px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+.filter-group h2 {
+    margin: 0 0 13px;
+
+    color: var(--blue);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   FILTER BUTTONS
+========================================= */
+
+.filter-buttons,
+.subcategory-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-buttons {
+    gap: 7px;
+}
+
+.subcategory-buttons {
+    gap: 6px;
+}
+
+.filter {
+    padding: 6px 13px;
+
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+
+    background: var(--white);
+    color: #5c6970;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.45;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.filter:hover {
+    border-color: var(--border-hover);
+    background: #f8fafb;
+    color: var(--blue);
+}
+
+.filter.active {
+    border-color: var(--blue);
+    background: var(--blue);
+    color: var(--white);
+    font-weight: 500;
+}
+
+.filter:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+
+/* =========================================
+   MAIN CATEGORY MENU
+========================================= */
+
+.main-category-buttons {
+    align-items: center;
+}
+
+.category-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.submenu-arrow {
+    display: inline-block;
+
+    font-size: 14px;
+    line-height: 1;
+
+    transition: transform var(--transition);
+}
+
+.category-main[data-category="razredi-sazu"].active .submenu-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   SUBCATEGORY WRAPPER
+========================================= */
+
+.subcategory-wrapper {
+    display: none;
+
+    margin-top: 15px;
+    padding: 15px 16px;
+
+    background: #f8fafb;
+
+    border-top: 1px solid #e7ebed;
+    border-left: 3px solid var(--gold);
+    border-radius: 0 5px 5px 0;
+}
+
+.subcategory-wrapper.open {
+    display: block;
+}
+
+.subcategory-heading {
+    margin-bottom: 10px;
+
+    color: var(--blue);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.subcategory {
+    background: var(--white);
+    color: #59676f;
+}
+
+.subcategory.active {
+    border-color: var(--gold);
+    background: var(--gold);
+    color: var(--white);
+}
+
+
+/* =========================================
+   BOOK SECTION
+========================================= */
+
+.books-section {
+    padding-bottom: 70px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   SECTION TITLE + COUNT
+========================================= */
+
+.section-title,
+.section-heading-left {
+    display: flex;
+    align-items: baseline;
+
+    min-width: 0;
+}
+
+.section-title {
+    gap: 12px;
+}
+
+.section-heading-left {
+    gap: 14px;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    color: var(--blue);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 26px;
+}
+
+.book-count {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   SEARCH + SORT
+========================================= */
+
+.section-heading-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-box {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+#bookSearch {
+    width: 220px;
+    height: 42px;
+
+    padding: 0 38px 0 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+}
+
+#bookSearch:focus {
+    border-color: #333;
+}
+
+#clearSearch {
+    position: absolute;
+    right: 8px;
+
+    display: none;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #777;
+
+    font-size: 22px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+#clearSearch:hover {
+    color: #000;
+}
+
+.sort-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    flex-shrink: 0;
+}
+
+.sort-label {
+    margin-right: 4px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+.sort-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 5px 11px;
+
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+
+    background: var(--white);
+    color: #5c6970;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.45;
+
+    cursor: pointer;
+    white-space: nowrap;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.sort-button:hover {
+    border-color: var(--border-hover);
+    background: #f8fafb;
+    color: var(--blue);
+}
+
+.sort-button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+.sort-arrow {
+    color: var(--gold);
+
+    font-size: 14px;
+    line-height: 1;
+}
+
+
+/* =========================================
+   BOOK GRID
+========================================= */
+
+.book-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================
+   BOOK CARD
+========================================= */
+
+.book-card {
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* =========================================
+   BOOK LINK
+========================================= */
+
+.book-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 220px;
+
+    padding: var(--card-padding);
+
+    overflow: hidden;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    color: var(--text);
+    text-decoration: none;
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
+}
+
+
+/* =========================================
+   GOLD CARD ACCENT
+========================================= */
+
+.book-link::before {
+    content: "";
+
+    position: absolute;
+    top: 18px;
+    bottom: 18px;
+    left: 0;
+
+    width: 3px;
+
+    background: var(--gold);
+
+    border-radius: 0 3px 3px 0;
+}
+
+
+/* =========================================
+   BOOK COVER
+========================================= */
+
+.book-icon {
+    width: var(--book-cover-width);
+    height: 140px;
+
+    flex: 0 0 var(--book-cover-width);
+
+    margin-right: var(--book-cover-gap);
+
+    align-self: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: var(--blue-light);
+
+    border-radius: 5px;
+
+    font-size: 21px;
+}
+
+.book-icon img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   BOOK CONTENT
+========================================= */
+
+.book-content {
+    width: 0;
+    min-width: 0;
+
+    flex: 1 1 auto;
+
+    padding-right: 30px;
+}
+
+.book-series {
+    margin: 0 0 9px;
+
+    color: var(--gold);
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.book-content h3 {
+    margin: 0 0 9px;
+
+    color: var(--blue);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.45;
+
+    overflow-wrap: break-word;
+}
+
+.book-content p:not(.book-series) {
+    margin: 6px 0 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.book-author {
+    color: #3f4d54 !important;
+
+    font-size: 13px !important;
+    font-weight: 500;
+    line-height: 1.45;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================
+   BOOK ARROW
+========================================= */
+
+.arrow {
+    position: absolute;
+    right: 18px;
+    bottom: 17px;
+
+    color: var(--gold);
+
+    font-size: 20px;
+
+    opacity: 0;
+
+    transform: translateX(-5px);
+
+    transition:
+        opacity var(--transition),
+        transform var(--transition);
+}
+
+
+/* =========================================
+   BOOK HOVER / FOCUS
+========================================= */
+
+.book-link:hover {
+    border-color: #c3d0d7;
+
+    box-shadow:
+        0 5px 20px rgba(23, 63, 95, 0.08);
+
+    transform: translateY(-2px);
+}
+
+.book-link:hover .arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.book-link:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   HIDDEN BOOKS
+========================================= */
+
+.book-card.hidden {
+    display: none;
+}
+
+
+/* =========================================
+   BOOK OVERLAY — DESKTOP
+========================================= */
+
+.book-overlay {
+    position: absolute;
+
+    top: calc(-1 * var(--overlay-vertical-overlap));
+    right: 0;
+    bottom: calc(-1 * var(--overlay-vertical-overlap));
+
+    left:
+        calc(
+            var(--card-padding) +
+            var(--book-cover-width) +
+            var(--book-cover-gap) +
+            var(--overlay-gap)
+        );
+
+    width: auto;
+
+    max-width: none;
+    max-height: none;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /*
+     * Keep the text a consistent distance
+     * from the book cover.
+     */
+    padding: 20px 20px 20px 12px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 0 7px 7px 0;
+
+    box-shadow:
+        -5px 0 18px rgba(23, 63, 95, 0.10),
+        0 5px 20px rgba(23, 63, 95, 0.08);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateX(10px);
+
+    transition:
+        opacity var(--transition),
+        transform var(--transition),
+        visibility var(--transition);
+
+    z-index: 100;
+
+    scrollbar-width: thin;
+    scrollbar-color:
+        #b9c8d1
+        transparent;
+}
+
+
+
+/* =========================================
+   OVERLAY SCROLLBAR
+========================================= */
+
+.book-overlay::-webkit-scrollbar {
+    width: 7px;
+}
+
+.book-overlay::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.book-overlay::-webkit-scrollbar-thumb {
+    background: #b9c8d1;
+    border-radius: 10px;
+}
+
+.book-overlay::-webkit-scrollbar-thumb:hover {
+    background: #8fa3af;
+}
+
+
+/* =========================================
+   DESKTOP OVERLAY OPEN STATE
+========================================= */
+
+@media (min-width: 751px) {
+
+    .book-card:hover .book-overlay,
+    .book-card:focus-within .book-overlay {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================
+   OVERLAY CONTENT
+========================================= */
+
+.book-overlay h3 {
+    margin: 0 0 12px;
+
+    color: var(--blue);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+
+    text-align: left;
+}
+
+.book-overlay p {
+    margin: 0 0 16px;
+
+    color: #555;
+
+    font-size: 12px;
+    line-height: 1.3;
+
+    text-align: justify;
+}
+
+.book-overlay a {
+    display: inline-block;
+
+    color: var(--blue);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.book-overlay a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 30px 20px;
+
+    background: var(--white);
+    color: var(--muted);
+
+    font-size: 13px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+
+    :root {
+        /*
+         * Tablet card geometry.
+         *
+         * 20px card padding
+         * + 100px cover
+         * + 18px cover gap
+         */
+        --card-padding: 20px;
+        --book-cover-width: 100px;
+        --book-cover-gap: 18px;
+    }
+
+
+    .book-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .book-icon {
+        height: 135px;
+    }
+
+    .book-link {
+        padding: var(--card-padding);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    /* -------------------------------------
+       SECTION HEADING
+    ------------------------------------- */
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .sort-control {
+        width: 100%;
+    }
+
+
+    /* -------------------------------------
+       HEADER
+    ------------------------------------- */
+
+    .header-inner {
+        width: calc(100% - 30px);
+        padding: 15px;
+    }
+
+    .main-nav {
+        gap: 8px;
+    }
+
+    .main-nav a {
+        min-width: auto;
+
+        padding: 0;
+
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+
+    /* -------------------------------------
+       MAIN
+    ------------------------------------- */
+
+    .container {
+        width: calc(100% - 30px);
+        padding-top: 20px;
+    }
+
+    .filters {
+        padding: 14px 16px;
+    }
+
+    .filter-buttons {
+        gap: 6px;
+    }
+
+
+    /* -------------------------------------
+       CATEGORY MENU
+    ------------------------------------- */
+
+    .main-category-buttons {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 6px;
+    }
+
+    .category-main {
+        width: 100%;
+
+        justify-content: space-between;
+
+        text-align: left;
+    }
+
+    .subcategory-wrapper {
+        margin-top: 12px;
+        padding: 13px;
+
+        border-left-width: 3px;
+    }
+
+    .subcategory-buttons {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 6px;
+    }
+
+    .subcategory {
+        width: 100%;
+
+        text-align: left;
+
+        white-space: normal;
+    }
+
+
+    /* -------------------------------------
+       BOOK GRID
+    ------------------------------------- */
+
+    .book-grid {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    /* -------------------------------------
+       BOOK CARD
+    ------------------------------------- */
+
+    .book-card {
+        display: block;
+
+        width: 100%;
+        min-width: 0;
+
+        isolation: isolate;
+    }
+
+
+    /* -------------------------------------
+       BOOK LINK
+    ------------------------------------- */
+
+    .book-link {
+        width: 100%;
+        min-width: 0;
+        min-height: 220px;
+
+        padding: 20px;
+    }
+
+    .book-icon {
+        width: 95px;
+        height: 130px;
+
+        flex-basis: 95px;
+
+        margin-right: 18px;
+    }
+
+    .book-content {
+        width: 0;
+        min-width: 0;
+
+        flex: 1 1 auto;
+
+        padding-right: 20px;
+    }
+
+    .book-content h3 {
+        height: auto;
+        max-width: 100%;
+
+        overflow: visible;
+        overflow-wrap: anywhere;
+    }
+
+    .book-author {
+        height: auto;
+        min-height: 0;
+        max-width: 100%;
+
+        overflow: visible;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* -------------------------------------
+       MOBILE ARROW
+    ------------------------------------- */
+
+    .arrow {
+        right: 14px;
+        bottom: 14px;
+
+        opacity: 1;
+
+        transform: none;
+    }
+
+
+    /* -------------------------------------
+       MOBILE OVERLAY
+       
+       The mobile overlay deliberately uses
+       percentage positioning because the
+       cover must remain visible.
+    ------------------------------------- */
+
+    .book-overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    left:
+        calc(
+            var(--card-padding) +
+            var(--book-cover-width) +
+            var(--book-cover-gap) +
+            6px
+        );
+
+    width: auto;
+    height: auto;
+
+    max-width: none;
+    max-height: none;
+
+    margin: 0;
+
+    padding: 18px 14px 18px 10px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 0 7px 7px 0;
+
+    box-shadow:
+        -5px 0 18px rgba(23, 63, 95, 0.10),
+        0 5px 20px rgba(23, 63, 95, 0.08);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: none;
+
+    transition:
+        opacity var(--transition),
+        visibility var(--transition);
+
+    z-index: 50;
+}
+
+
+    /* -------------------------------------
+       MOBILE OVERLAY OPEN STATE
+    ------------------------------------- */
+
+.book-card.overlay-open .book-overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: none;
+}
+
+
+
+    /* -------------------------------------
+       PRESERVE BOOK COVER
+    ------------------------------------- */
+
+    .book-card.overlay-open .book-link {
+        visibility: visible;
+    }
+
+    .book-card.overlay-open .book-content,
+    .book-card.overlay-open .arrow {
+        visibility: hidden;
+    }
+
+
+    /* -------------------------------------
+       DISABLE DESKTOP HOVER ON MOBILE
+    ------------------------------------- */
+
+    .book-card:hover .book-overlay {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: none;
+    }
+
+    .book-card.overlay-open:hover .book-overlay {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: none;
+    }
+
+
+    /* -------------------------------------
+       MOBILE OVERLAY CONTENT
+    ------------------------------------- */
+
+    .book-overlay h3 {
+        margin: 0 0 10px;
+
+        font-size: 15px;
+        line-height: 1.35;
+
+        text-align: left;
+
+        overflow-wrap: anywhere;
+    }
+
+    .book-overlay p {
+        margin: 0 0 13px;
+
+        font-size: 12px;
+        line-height: 1.5;
+
+        text-align: justify;
+
+        overflow-wrap: anywhere;
+    }
+
+    .book-overlay a {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+
+    /* -------------------------------------
+       CLICKABLE BOOK
+    ------------------------------------- */
+
+    .book-card .book-link[role="button"] {
+        cursor: pointer;
+    }
+
+    .book-card .book-link[role="button"]:focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 3px;
+    }
+
+
+    /* -------------------------------------
+       OPTIONAL CLOSE BUTTON
+    ------------------------------------- */
+
+    .book-overlay-close {
+        position: absolute;
+        top: 6px;
+        right: 7px;
+
+        width: 28px;
+        height: 28px;
+
+        padding: 0;
+
+        border: none;
+        background: transparent;
+
+        color: #777;
+
+        font-size: 22px;
+        line-height: 28px;
+
+        cursor: pointer;
+
+        z-index: 2;
+    }
+
+    .book-overlay-close:hover {
+        color: #000;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 450px) {
+
+    .brand-name {
+        font-size: 26px;
+    }
+
+    .main-nav {
+        gap: 6px;
+    }
+
+    .main-nav a {
+        min-width: auto;
+
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .page-heading h1 {
+        font-size: 36px;
+    }
+
+    .filter {
+        padding: 7px 10px;
+
+        font-size: 13px;
+    }
+
+
+    /* -------------------------------------
+       BOOK
+    ------------------------------------- */
+
+    .book-link {
+        padding: 18px;
+    }
+
+    .book-icon {
+        width: 80px;
+        height: 115px;
+
+        flex-basis: 80px;
+
+        margin-right: 15px;
+    }
+
+    .book-content {
+        width: 0;
+        min-width: 0;
+
+        padding-right: 15px;
+    }
+
+    .book-content h3 {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .book-author {
+        font-size: 12px !important;
+        line-height: 1.4;
+    }
+
+
+    /* -------------------------------------
+       VERY SMALL SCREEN OVERLAY
+    ------------------------------------- */
+
+    .book-overlay {
+    left:
+        calc(
+            var(--card-padding) +
+            var(--book-cover-width) +
+            var(--book-cover-gap) +
+            5px
+        );
+
+    padding: 16px 14px 16px 8px;
+
+    border-radius: 0 7px 7px 0;
+}
+
+.book-card.overlay-open .book-overlay {
+    left:
+        calc(
+            var(--card-padding) +
+            var(--book-cover-width) +
+            var(--book-cover-gap) +
+            5px
+        );
+}
+
+
+    .book-overlay h3 {
+        font-size: 16px;
+        line-height: 1.35;
+    }
+
+    .book-overlay p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}

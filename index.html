@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteka SAZU</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER IMAGE ROW -->
+    <div class="header-image-row">
+
+        <div class="header-image-inner">
+
+            <img src="images/OSTALO/header.png" alt="Biblioteka SAZU" class="header-image">
+
+        </div>
+
+    </div>
+
+
+    <!-- BRAND + NAVIGATION ROW -->
+    <div class="header-nav-row">
+
+        <div class="header-inner">
+
+            <div class="brand">
+
+                <a href="#" class="brand-name">
+                    Publikacije SAZU
+                </a>
+
+                <span class="brand-subtitle"></span>
+
+            </div>
+
+
+            <nav class="main-nav">
+
+                <a href="https://omp.sazu.si/library/catalog" target="_blank" rel="noopener">
+                    Monografije SAZU (OMP)
+                </a>
+
+                <a href="https://ojs.sazu.si/" target="_blank" rel="noopener">
+                    Revije SAZU (OJS)
+                </a>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+    <main class="container">
+
+        <!-- =========================================
+         HEADER TEXT
+    ========================================== -->
+
+        <section class="intro-text">
+
+            <p>
+                SAZU prispeva k razvoju znanstvene misli in umetniške ustvarjalnosti tudi z izdajanjem publikacij. Vsako
+                leto izda Letopis, v katerem sta predstavljena njeno delo in organizacija. Pri Akademiji redno izhajajo
+                tudi revije (pregled nad strukturo in lastništvom medijev vodi Ministrstvo za kulturo v v razvidu
+                medijev), priložnostno pa publikacije ob pomembnih dogodkih oziroma občasno zvezki v zbirkah, ki jih
+                urejajo posamezni <a href="https://www.sazu.si/clani-sazu" target="_blank" rel="noopener">razredi</a>.
+            </p>
+            <p>
+                Pri SAZU izhajajo tudi edicije, ki spremljajo simpozije ali znanstvena srečanja, in knjige oziroma
+                monografije.
+            </p>
+            <p>
+                Akademija je včasih v vlogi soizdajateljice, letno pa namenja tudi sredstva po programu za tisk
+                znanstvenih in umetnostnih publikacij drugih založb. Za publikacijsko dejavnost skrbi tudi njena
+                <a href="https://www.sazu.si/fundacija-dr-bruno-breschi" target="_blank" rel="noopener">Fundacija dr.
+                    Bruno Breschi</a> (do leta 2017 tudi <a href="https://www.sazu.si/fundacija-janez-vajkard-valvasor"
+                    target="_blank" rel="noopener">Fundacija Janez Vajkard Valvasor</a>).
+            </p>
+            <p>
+                Med digitaliziranimi publikacijami je treba izpostaviti Slovenski biografski leksikon (1925–1991), ki se
+                dopolnjuje z Novim Slovenskim biografskim leksikonom; skupaj s Primorskim slovenskim biografskim
+                leksikonom sestavljata spletni portal Slovenska biografija, ta pa je vključena v mednarodni biografski
+                portal Biographie-Portal, kjer so tudi strani v slovenskem jeziku.
+            </p>
+            <p>
+                SAZU tudi bdi nad izdelavo temeljnih slovarjev slovenskega knjižnega in strokovnega jezika, ki jih
+                pripravljajo strokovnjaki z Inštituta za slovenski jezik Frana Ramovša ZRC SAZU.
+            </p>
+            <p>
+                Publikacije SAZU prodaja in zamenjuje Biblioteka (cenik), kupiti pa jih je mogoče tudi v prodajalnah
+                Mladinske knjige, knjigarni Azil, spletni knjigarni Buča, knjigarnah Celjske Mohorjeve družbe, knjigarni
+                Filozofske fakultete, Narodni galeriji, knjigarni Kulturnica, knjigarni Libris in prodajalni Hartman.
+            </p>
+
+        </section>
+
+        <!-- =========================================
+     FILTERS
+========================================== -->
+
+        <section class="filters">
+
+            <div class="filter-group">
+
+                <h2>Kategorije</h2>
+
+
+                <!-- =====================================
+             MAIN CATEGORY LEVEL
+        ====================================== -->
+
+                <div class="filter-buttons main-category-buttons">
+
+
+                    <!-- ALL -->
+
+                    <button class="filter category-main active" data-category="all" type="button">
+                        Vse
+                    </button>
+
+
+                    <!-- RAZREDI SAZU -->
+
+                    <button class="filter category-main" data-category="razredi-sazu" type="button"
+                        aria-expanded="false" aria-controls="razrediSubmenu">
+                        Razredi SAZU
+
+                        <span class="submenu-arrow">▾</span>
+                    </button>
+
+
+                    <!-- ZBIRKE SAZU -->
+
+                    <button class="filter category-main" data-category="zbirke-sazu" type="button" aria-expanded="false"
+                        aria-controls="zbirkeSubmenu">
+                        Zbirke SAZU
+
+                        <span class="submenu-arrow">▾</span>
+                    </button>
+
+
+                    <!-- SERIJSKE PUBLIKACIJE SAZU -->
+
+                    <button class="filter category-main" data-category="serije-sazu" type="button" aria-expanded="false"
+                        aria-controls="serije-sazuSubmenu">
+                        Serijske publikacije SAZU
+
+                        <span class="submenu-arrow">▾</span>
+                    </button>
+
+                    <!-- SERIJSKE PUBLIKACIJE SAZU in ZRC - NO SUBMENU -->
+
+                    <button class="filter category-main" data-category="serije-zrcsazu" type="button">
+                        Serijske publikacije SAZU in ZRC SAZU
+
+                    </button>
+
+                    <!-- PUBLIKACIJE S POMOČJO SAZU - NO SUBMENU -->
+
+                    <button class="filter category-main" data-category="pomoc-sazu" type="button">
+                        Publikacije, izšle s pomočjo SAZU
+
+                    </button>
+
+                    <!-- PUBLIKACIJE V SOZALOŽNIŠTVU SAZU - NO SUBMENU -->
+
+                    <button class="filter category-main" data-category="sozaloz-sazu" type="button">
+                        Sozaložništvo SAZU
+
+                    </button>
+
+                    <!-- SPLOSNO — NO SUBMENU -->
+
+                    <button class="filter category-main" data-category="splosno" type="button">
+                        Splošno
+                    </button>
+                </div>
+
+
+                <!-- =====================================
+             RAZREDI SAZU SUBMENU
+        ====================================== -->
+
+                <div class="subcategory-wrapper" id="razrediSubmenu" aria-hidden="true">
+
+                    <div class="subcategory-heading">
+                        Razredi SAZU
+                    </div>
+
+
+                    <div class="filter-buttons subcategory-buttons">
+
+
+                        <button class="filter subcategory" data-subcategory="I. razred" type="button">
+                            I. Razred za zgodovinske in družbene vede
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="II. razred" type="button">
+                            II. Razred za filološke in literarne vede
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="III. razred" type="button">
+                            III. Razred za matematične, fizikalne, kemijske in tehniške vede
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="IV. razred" type="button">
+                            IV. Razred za naravoslovne vede
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="V. razred" type="button">
+                            V. Razred za umetnosti
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="VI. razred" type="button">
+                            VI. Razred za medicinske vede
+                        </button>
+
+                        <button class="filter subcategory" data-subcategory="drugo" type="button">
+                            Drugo
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================
+             ZBIRKE SAZU SUBMENU
+        ====================================== -->
+
+                <div class="subcategory-wrapper" id="zbirkeSubmenu" aria-hidden="true">
+
+                    <div class="subcategory-heading">
+                        Zbirke SAZU
+                    </div>
+
+
+                    <div class="filter-buttons subcategory-buttons">
+
+
+                        <button class="filter subcategory" data-subcategory="razprave I." type="button">
+                            Razprave I. Razreda za zgodovinske in družbene vede
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="razprave II." type="button">
+                            Razprave II. Razreda za filološke in literarne vede
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="razprave V." type="button">
+                            Razprave V. Razreda za umetnosti
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================
+             SERIJE SAZU SUBMENU
+        ====================================== -->
+
+                <div class="subcategory-wrapper" id="serije-sazuSubmenu" aria-hidden="true">
+
+                    <div class="subcategory-heading">
+                        Serijske publikacije SAZU
+                    </div>
+
+
+                    <div class="filter-buttons subcategory-buttons">
+
+
+                        <button class="filter subcategory" data-subcategory="fagopyrum" type="button">
+                            Fagopyrum
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="folia" type="button">
+                            Folia Biologica et Geologica
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="letopis" type="button">
+                            Letopis SAZU
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+         BOOK GRID
+    ========================================== -->
+
+        <section class="books-section">
+
+            <div class="section-heading">
+
+                <div class="section-heading-left">
+
+                    <h2>
+                        Publikacije
+                    </h2>
+
+                    <span class="book-count">
+                        11 knjig
+                    </span>
+
+                </div>
+
+
+                <div class="section-heading-right">
+
+                    <div class="search-box">
+
+                        <input type="search" id="bookSearch" placeholder="Išči publikacije..."
+                            aria-label="Išči publikacije">
+
+                        <button type="button" id="clearSearch" aria-label="Počisti iskanje" title="Počisti iskanje">
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <button class="sort-button" id="sortButton" type="button"
+                        aria-label="Razvrsti publikacije od najnovejših do najstarejših"
+                        title="Razvrsti od najnovejših do najstarejših">
+
+                        <span class="sort-arrow">
+                            ↓
+                        </span>
+
+                        <span class="sort-label">
+                            Najnovejše
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="book-grid" id="bookGrid">
+
+
+                <!-- =================================
+                 BOOK 1
+            ================================== -->
+
+                <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
+                    data-subcategory="I. razred, razprave I." data-year="2025" data-order="1">
+
+
+                    <a href="https://omp.sazu.si/library/catalog/book/17" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/irazred/JHHT.jpg" alt="Naslovnica knjige Historična topografija">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Razprave I., 44
+                            </p>
+
+
+                            <h3>
+                                Historična topografija predjožefinskih župnij na Slovenskem. Kranjska
+                            </h3>
+
+
+                            <p class="book-author">
+                                Janez Höfler
+                            </p>
+
+
+                            <p>
+                                2025
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- =================================
+                 BOOK 2
+            ================================== -->
+
+                <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
+                    data-subcategory="I. razred, razprave I." data-year="2024">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/18" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/irazred/ZSRVM.jpg"
+                                alt="Naslovnica knjige Zbornik ob stoletnici rojstva akademika profesorja dr. Vasilija Melika">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Razprave I., 43
+                            </p>
+
+
+                            <h3>
+                                Zbornik ob stoletnici rojstva akademika profesorja dr. Vasilija Melika
+                            </h3>
+
+
+                            <p class="book-author">
+                                Rok Stergar (ur.), Marko Štuhec (ur.), Peter Vodopivec (ur.)
+                            </p>
+
+
+                            <p>
+                                2024
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- =================================
+                 BOOK 3
+            ================================== -->
+
+                <article class="book-card" data-category="razredi-sazu" data-subcategory="I. razred" data-year="2025">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/10" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/irazred/SPP.jpg"
+                                alt="Naslovnica knjige Sociologija: iz preteklosti za prihodnost">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series"></p>
+
+
+                            <h3>
+                                Sociologija: iz preteklosti za prihodnost: ob 60-letnici Slovenskega sociološkega
+                                društva
+                            </h3>
+
+
+                            <p class="book-author">
+                                Zdravko Mlinar
+                            </p>
+
+
+                            <p>
+                                2025
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- =================================
+                 BOOK 4
+            ================================== -->
+
+                <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
+                    data-subcategory="I. razred, razprave I." data-year="2025" data-order="2">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/7" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/irazred/OTR.jpg" alt="Naslovnica knjige Omnia tempus revelat">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Razprave I., 45
+                            </p>
+
+
+                            <h3>
+                                Omnia tempus revelat: Studies on Antiquity and the Early Middle Ages. In Memory of
+                                Jaroslav Šašel
+                            </h3>
+
+
+                            <p class="book-author">
+                                Milan Lovenjak (ur.), Alenka Cedilnik (ur.), Andrej Gaspari (ur.), Jana Horvat (ur.)
+                            </p>
+
+
+                            <p>
+                                2025
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- =================================
+                 BOOK 5
+            ================================== -->
+
+                <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
+                    data-subcategory="II. razred, razprave II." data-year="2026">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/28" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/iirazred/ESMK.jpg"
+                                alt="Naslovnica knjige Elementi slovenske moderne književnosti">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Razprave II., 35
+                            </p>
+
+
+                            <h3>
+                                Elementi slovenske moderne književnosti: Razprave ob stoletnici rojstva akad. Franca
+                                Zadravca
+                            </h3>
+
+
+                            <p class="book-author">
+                                Tomaž Toporišič (ur.)
+                            </p>
+
+
+                            <p>
+                                2026
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- =================================
+                 BOOK 6
+            ================================== -->
+
+                <article class="book-card" data-category="razredi-sazu" data-subcategory="II. razred" data-year="2022">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/13" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/iirazred/NPAB.jpg" alt="Naslovnica knjige Novi pogledi na Adama Bohoriča">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Razprave II., 26
+                            </p>
+
+
+                            <h3>
+                                Novi pogledi na Adama Bohoriča
+                            </h3>
+
+
+                            <p class="book-author">
+                                Marko Jesenšek (ur.)
+                            </p>
+
+
+                            <p>
+                                2022
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- =================================
+                 BOOK 7
+            ================================== -->
+
+                <article class="book-card" data-category="razredi-sazu" data-subcategory="IV. razred" data-year="2020">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/22" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/ivrazred/ZSAP.jpg"
+                                alt="Naslovnica knjige Zgodovina slovenskega agrarnega prebivalstva">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series"></p>
+
+
+                            <h3>
+                                Zgodovina slovenskega agrarnega prebivalstva
+                            </h3>
+
+
+                            <p class="book-author">
+                                Jože Maček
+                            </p>
+
+
+                            <p>
+                                2020
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- =================================
+                 BOOK 8
+            ================================== -->
+
+                <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
+                    data-subcategory="V. razred, razprave V." data-year="2026">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/29" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/vrazred/ARSZN.jpg"
+                                alt="Naslovnica knjige Alojz Rebula: Slovenec med zgodovino in nadčasnim">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Razprave V., 2
+                            </p>
+
+
+                            <h3>
+                                Alojz Rebula: Slovenec med zgodovino in nadčasnim
+                            </h3>
+
+
+                            <p class="book-author">
+                                Brane Senegačnik (ur.)
+                            </p>
+
+
+                            <p>
+                                2026
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- =================================
+                 BOOK 9
+            ================================== -->
+
+                <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
+                    data-subcategory="V. razred, razprave V." data-year="2023">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/23" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/vrazred/SZ100.jpg"
+                                alt="Naslovnica knjige Simčičev zbornik: ob stoletnici rojstva">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Razprave V., 1
+                            </p>
+
+
+                            <h3>
+                                Simčičev zbornik: ob stoletnici rojstva
+                            </h3>
+
+
+                            <p class="book-author">
+                                Jožef Muhovič (ur.)
+                            </p>
+
+
+                            <p>
+                                2023
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+                <article class="book-card" data-category="serije-sazu" data-subcategory="folia" data-year="2026">
+
+                    <a href="https://ojs.sazu.si/folia_bio_geo/issue/view/current" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/Folia/FOL67-1.jpg" alt="Naslovnica knjige Folia V. 67, n. 1">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Folia Biologica et Geologica
+                            </p>
+
+
+                            <h3>
+                                Folia Biologica et Geologica Letn. 67 Št. 1
+                            </h3>
+
+
+                            <p class="book-author">
+
+                            </p>
+
+
+                            <p>
+                                2026
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+                <article class="book-card" data-category="serije-sazu" data-subcategory="folia" data-year="2009">
+
+                    <a href="https://www.sazu.si/uploads/files/57dfbe71e126b1a75cebe90f/420-121-0.pdf" class="book-link"
+                        target="_blank" rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/Folia/FOL50-1.jpg" alt="Naslovnica knjige Folia V. 50, n. 1">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Folia Biologica et Geologica
+                            </p>
+
+
+                            <h3>
+                                Folia Biologica et Geologica Letn. 50 Št. 1
+                            </h3>
+
+
+                            <p class="book-author">
+
+                            </p>
+
+
+                            <p>
+                                2009
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+                <article class="book-card" data-category="serije-zrcsazu" data-year="0" data-order="5">
+
+                    <a href="https://ojs.zrc-sazu.si/carsologica/issue/archive" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/Sozaloznistvo/AC.jpg" alt="Naslovnica knjige Acta Carsologica">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Acta Carsologica
+                            </p>
+
+
+                            <h3>
+                                Acta Carsologica
+                            </h3>
+
+
+                            <p class="book-author">
+
+                            </p>
+
+
+                            <p>
+                                1998-
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+                <article class="book-card" data-category="serije-zrcsazu" data-year="0" data-order="4">
+
+                    <a href="https://ojs.zrc-sazu.si/ags/issue/archive" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/Sozaloznistvo/AGS.jpg" alt="Naslovnica knjige Acta Geographica Slovenica">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Acta Geographica Slovenica
+                            </p>
+
+
+                            <h3>
+                                Acta Geographica Slovenica
+                            </h3>
+
+
+                            <p class="book-author">
+
+                            </p>
+
+
+                            <p>
+                                1952-
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+                <article class="book-card" data-category="serije-zrcsazu" data-year="0" data-order="3">
+
+                    <a href="https://ojs.zrc-sazu.si/av/issue/archive" class="book-link" target="_blank" rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/Sozaloznistvo/AV.jpg" alt="Naslovnica knjige Arheološki vestnik">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Arheološki vestnik
+                            </p>
+
+
+                            <h3>
+                                Arheološki vestnik
+                            </h3>
+
+
+                            <p class="book-author">
+
+                            </p>
+
+
+                            <p>
+                                1950-
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+                <article class="book-card" data-category="serije-zrcsazu" data-year="0" data-order="2">
+
+                    <a href="https://ojs.zrc-sazu.si/filozofski-vestnik/issue/archive" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/Sozaloznistvo/FV.jpg" alt="Naslovnica knjige Filozofski vestnik">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Filozofski vestnik
+                            </p>
+
+
+                            <h3>
+                                Filozofski vestnik
+                            </h3>
+
+
+                            <p class="book-author">
+
+                            </p>
+
+
+                            <p>
+                                1980-
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+                <article class="book-card" data-category="serije-zrcsazu" data-year="0" data-order="1">
+
+                    <a href="https://ojs.zrc-sazu.si/traditiones/issue/archive" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/Sozaloznistvo/TRAD.jpg" alt="Naslovnica knjige Traditiones">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Traditiones
+                            </p>
+
+
+                            <h3>
+                                Traditiones
+                            </h3>
+
+
+                            <p class="book-author">
+
+                            </p>
+
+
+                            <p>
+                                1972-
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+                <article class="book-card" data-category="serije-sazu" data-subcategory="letopis" data-year="2025">
+
+                    <a href="https://www.sazu.si/uploads/files/publikacije24/letopis_2024_internet_mali.pdf"
+                        class="book-link" target="_blank" rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/Letopis/L75.jpg" alt="Naslovnica knjige Letopis 75">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+
+
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 75/2024
+                            </h3>
+
+
+                            <p class="book-author">
+
+                            </p>
+
+
+                            <p>
+                                2025
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+                <article class="book-card" data-category="serije-sazu" data-subcategory="fagopyrum" data-year="2026">
+
+                    <a href="https://ojs.sazu.si/fagopyrum/issue/view/728" class="book-link" target="_blank"
+                        rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/Fagopyrum/F43-2.jpg" alt="Naslovnica knjige Fagopyrum F43-2">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Fagopyrum
+                            </p>
+
+
+                            <h3>
+                                Fagopyrum Letn. 43 Št. 2
+                            </h3>
+
+
+                            <p class="book-author">
+
+                            </p>
+
+
+                            <p>
+                                2026
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+                <article class="book-card" data-category="serije-sazu" data-subcategory="fagopyrum" data-year="1981">
+
+                    <a href="https://www.sazu.si/uploads/files/Fagopyrum1-30/Fagopyrum_1_Buckweat%20newsletter%20vol.%201,%20Lj,%201981.pdf"
+                        class="book-link" target="_blank" rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/Fagopyrum/F1.jpg" alt="Naslovnica knjige Fagopyrum F1">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Fagopyrum
+                            </p>
+
+
+                            <h3>
+                                Fagopyrum Letn. 1
+                            </h3>
+
+
+                            <p class="book-author">
+
+                            </p>
+
+
+                            <p>
+                                1981
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+                <article class="book-card" data-category="splosno" data-year="2023">
+
+                    <a href="https://www.sazu.si/uploads/files/publikacije24/sazuprelom-press.pdf" class="book-link"
+                        target="_blank" rel="noopener">
+
+                        <div class="book-icon">
+
+                            <img src="images/Splosno/SAZUB.jpg" alt="Naslovnica knjige SAZU Brošura">
+
+                        </div>
+
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Brošura
+                            </p>
+
+
+                            <h3>
+                                Slovenska akademija znanosti in umetnosti
+                            </h3>
+
+
+                            <p class="book-author">
+
+                            </p>
+
+
+                            <p>
+                                2023
+                            </p>
+
+                        </div>
+
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- =================================
+                 BOOK 10
+            ================================== -->
+
+                <article class="book-card" data-category="pomoc-sazu" data-year="2022">
+
+                    <a class="book-link" role="button" tabindex="0" aria-expanded="false"
+                        aria-controls="pravnePanogeOverlay">
+
+                        <div class="book-icon">
+                            <img src="images/S pomocjo sazu/pravne-panoge.png" alt="Naslovnica knjige Pravne panoge">
+                        </div>
+
+                        <div class="book-content">
+
+                            <p class="book-series">
+                                Izšlo s pomočjo SAZU
+                            </p>
+
+                            <h3>
+                                Pravne panoge in metodologija razlage prava
+                            </h3>
+
+                            <p class="book-author">
+                                Aleš Novak (ur.), Marijan Pavčnik (ur.)
+                            </p>
+
+                            <p class="book-year">
+                                2022
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                    <div class="book-overlay" id="pravnePanogeOverlay">
+
+                        <!-- JavaScript will insert the book metadata here -->
+
+                        <p>
+                            Pravniki se že dolgo zavedamo, da razlaga pravnih besedil ni povsem enovita. Način,
+                            kako k razlagi pristopamo, ne bo odvisen samo od posameznega sodnika ali
+                            razlagalnih pravil v določenem pravnem sistemu, določala ga bo tudi vsebina, ki je
+                            predmet razlage. Kazensko pravo nam narekuje čim bolj dobesedno razlago, pri
+                            kateri je uporaba analogije prepovedana. Na področju pogodbenega prava nam bo
+                            pri razlagi dovoljeno prezreti dobesedni pomen besedila in se opreti na namen
+                            sopogodbenikov. Pravo Evropske unije nalaga sodiščem držav članic, da domače
+                            pravu razlagajo lojalno, s čimer jim obveže k izbiri tistih razlagalnih pristopov, ki
+                            jih
+                            bodo privedli do evropskemu pravnemu redu najbolj naklonjene razlage. Evropsko
+                            sodišče za človekove pravice je znano po svojem poudarku na dinamični razlagi
+                            Evropske konvencije za človekove pravice. Razlaga prava ni samo razlaga besedila,
+                            je tudi upoštevanje (pravnega in kulturnega) konteksta.
+                        </p>
+
+                        <p>
+                            Pričujoča zbirka razprav skuša osvetliti prav ta vidik razlage prava. Avtorji svojih
+                            prispevkih opozorijo na posebnosti razlage prava v različnih pravnih panogah, kot so
+                            civilno pravo, kazensko pravo, pravo Evropske unije, mednarodno pravo in ustavno
+                            pravo, osvetlijo pa tudi posebnosti primerjalnopravnega pristopa k razlagi in
+                            značilnosti razlage podzakonskih pravnih aktov. Pravno razlago postavljata v širi
+                            interpretativni in kulturni okvir uvodna beseda predsednika SAZU akad. prof. dr.
+                            Petra Štiha in sklepna razmišljanja akad. prof. dr. Janeza Kranjca.
+                            Knjiga je zanimiva za vse tiste pravnike, ki si želijo pridobiti bolj poglobljeno
+                            razumevanje posebnosti razlag na določenih pravnih področij, pa tudi za tiste, ki bi
+                            želeli na razlago v pravu pogledati z drugačnega zornega kota.
+                        </p>
+
+                        <p>
+                            Založila: Ljubljana: Lexpera
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Publikacije · Biblioteka SAZU
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
