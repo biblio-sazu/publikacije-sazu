@@ -60,7 +60,7 @@ body {
     --white: #ffffff;
 
     /* Layout */
-    --max-width: 1150px;
+    --max-width: 1000px;
 
     /* Animation */
     --transition: 0.2s ease;
@@ -74,16 +74,16 @@ body {
      * + cover margin
      * + desired gap
      */
-    --card-padding: 16px;
-    --book-cover-width: 80px;
-    --book-cover-gap: 16px;
-    --overlay-gap: 4px;
+    --card-padding: 22px;
+    --book-cover-width: 105px;
+    --book-cover-gap: 22px;
+    --overlay-gap: 5px;
 
     /*
      * How far the desktop overlay extends
      * beyond the top and bottom of the card.
      */
-    --overlay-vertical-overlap: 6px;
+    --overlay-vertical-overlap: 8px;
 }
 
 
@@ -1044,7 +1044,7 @@ footer p {
    TABLET
 ========================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
 
     :root {
         /*
