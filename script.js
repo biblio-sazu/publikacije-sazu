@@ -375,11 +375,10 @@ function updateBooks() {
     if (bookCount) {
 
         bookCount.textContent =
-            visibleBooks === 1
-                ? "1 knjiga"
-                : `${visibleBooks} knjig`;
+            `${visibleBooks} ${getBookLabel(visibleBooks)}`;
 
     }
+
 
 }
 
@@ -446,7 +445,7 @@ function sortBooks() {
         // -------------------------------------
 
         return books.indexOf(a) -
-               books.indexOf(b);
+            books.indexOf(b);
 
     });
 
@@ -1224,6 +1223,27 @@ window.addEventListener(
 
     }
 );
+
+// =========================================
+// SLOVENIAN BOOK COUNT
+// =========================================
+
+function getBookLabel(count) {
+
+    if (count === 1) {
+        return "knjiga";
+    }
+
+    if (count === 2) {
+        return "knjigi";
+    }
+
+    if (count === 3 || count === 4) {
+        return "knjige";
+    }
+
+    return "knjig";
+}
 
 
 // =========================================
