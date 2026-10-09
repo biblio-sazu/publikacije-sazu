@@ -139,7 +139,7 @@ BRAND
 
     font-size: 26px;
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1;
 
     letter-spacing: -0.8px;
     text-decoration: none;
@@ -234,7 +234,7 @@ INTRO TEXT
         Helvetica,
         sans-serif;
 
-    font-size: 0.82rem;
+    font-size: 0.90rem;
     font-weight: 400;
     line-height: 1.7;
 
@@ -1555,3 +1555,4 @@ REDUCED MOTION
     }
 
 }
+
