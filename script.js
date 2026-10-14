@@ -59,6 +59,14 @@ let currentSearch = "";
 // Advanced search criteria
 let currentAdvancedSearch = {};
 
+function normalizeSearchText(value) {
+    return String(value || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[-´¨`^~]/g, "")
+        .toLocaleLowerCase("sl")
+        .trim();
+}
 
 // =========================================
 // CURRENT SORT
@@ -275,374 +283,6 @@ function toggleBookOverlay(book) {
     }
 
 }
-/* =========================================
-   ADVANCED SEARCH
-========================================= */
-
-const advancedSearchToggle =
-    document.querySelector("#advancedSearchToggle");
-
-const advancedSearchPanel =
-    document.querySelector("#advancedSearchPanel");
-
-const advancedSearchClose =
-    document.querySelector("#advancedSearchClose");
-
-const advancedSearchForm =
-    document.querySelector("#advancedSearchForm");
-
-const advancedSearchStatus =
-    document.querySelector("#advancedSearchStatus");
-
-const advancedSearchFields = {
-    author: document.querySelector("#advancedAuthor"),
-    title: document.querySelector("#advancedTitle"),
-    yearFrom: document.querySelector("#advancedYearFrom"),
-    yearTo: document.querySelector("#advancedYearTo"),
-    otherAuthors: document.querySelector("#advancedOtherAuthors"),
-    collection: document.querySelector("#advancedCollection"),
-    isbn: document.querySelector("#advancedISBN"),
-    cobissId: document.querySelector("#advancedCobiss"),
-    keywords: document.querySelector("#advancedKeywords")
-};
-
-
-// -----------------------------------------
-// NORMALIZE TEXT FOR COMPARISON
-// -----------------------------------------
-
-function normalizeSearchText(value) {
-    return String(value || "")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLocaleLowerCase("sl")
-        .trim();
-}
-
-
-// -----------------------------------------
-// GET BOOK METADATA
-// Uses data attributes first, with visible
-// publication text as a fallback.
-// -----------------------------------------
-
-function getBookMetadata(book, attribute, selector) {
-    const storedValue = book.dataset[attribute];
-
-    if (storedValue !== undefined) {
-        return storedValue;
-    }
-
-    const element = selector
-        ? book.querySelector(selector)
-        : null;
-
-    return element ? element.textContent.trim() : "";
-}
-
-
-// -----------------------------------------
-// MATCH TEXT
-// -----------------------------------------
-
-function matchesText(value, query) {
-    if (!query) {
-        return true;
-    }
-
-    return normalizeSearchText(value)
-        .includes(normalizeSearchText(query));
-}
-
-
-// -----------------------------------------
-// MATCH IDENTIFIERS
-// ISBN and COBISS-ID use normalized exact
-// matching, ignoring spaces and hyphens.
-// -----------------------------------------
-
-function matchesIdentifier(value, query) {
-    if (!query) {
-        return true;
-    }
-
-    const normalizeIdentifier = text =>
-        String(text || "")
-            .toUpperCase()
-            .replace(/[\s-]/g, "");
-
-    return normalizeIdentifier(value) ===
-        normalizeIdentifier(query);
-}
-
-
-// -----------------------------------------
-// CHECK ALL ADVANCED CRITERIA FOR A BOOK
-// -----------------------------------------
-
-function advancedSearchMatches(book) {
-    const criteria = currentAdvancedSearch;
-
-    if (Object.keys(criteria).length === 0) {
-        return true;
-    }
-
-    const author = getBookMetadata(
-        book,
-        "author",
-        ".book-author"
-    );
-
-    const title = getBookMetadata(
-        book,
-        "title",
-        ".book-content h3"
-    );
-
-    const otherAuthors = getBookMetadata(
-        book,
-        "otherAuthors",
-        null
-    );
-
-    const collection = [
-        getBookMetadata(book, "collection", ".book-series"),
-        ...getValues(book.dataset.subcategory)
-    ].join(" ");
-
-    const isbn = getBookMetadata(
-        book,
-        "isbn",
-        null
-    );
-
-    const cobissId = getBookMetadata(
-        book,
-        "cobissId",
-        null
-    );
-
-    const keywords = getBookMetadata(
-        book,
-        "keywords",
-        null
-    );
-
-    const year = Number(book.dataset.year) || 0;
-
-    // Author / Editor
-    if (
-        criteria.author &&
-        !matchesText(author, criteria.author)
-    ) {
-        return false;
-    }
-
-    // Title
-    if (
-        criteria.title &&
-        !matchesText(title, criteria.title)
-    ) {
-        return false;
-    }
-
-    // Other authors
-    if (
-        criteria.otherAuthors &&
-        !matchesText(otherAuthors, criteria.otherAuthors)
-    ) {
-        return false;
-    }
-
-    // Collection
-    if (
-        criteria.collection &&
-        !matchesText(collection, criteria.collection)
-    ) {
-        return false;
-    }
-
-    // ISBN
-    if (
-        criteria.isbn &&
-        !matchesIdentifier(isbn, criteria.isbn)
-    ) {
-        return false;
-    }
-
-    // COBISS-ID
-    if (
-        criteria.cobissId &&
-        !matchesIdentifier(cobissId, criteria.cobissId)
-    ) {
-        return false;
-    }
-
-    // Keywords: all entered words must be present
-    if (criteria.keywords) {
-        const words = normalizeSearchText(criteria.keywords)
-            .split(/\s+/)
-            .filter(Boolean);
-
-        const bookKeywords = normalizeSearchText(
-            `${keywords} ${title} ${author} ${collection}`
-        );
-
-        if (!words.every(word => bookKeywords.includes(word))) {
-            return false;
-        }
-    }
-
-    // Publication year or year range
-    if (criteria.yearFrom || criteria.yearTo) {
-        if (!year) {
-            return false;
-        }
-
-        if (
-            criteria.yearFrom &&
-            year < Number(criteria.yearFrom)
-        ) {
-            return false;
-        }
-
-        if (
-            criteria.yearTo &&
-            year > Number(criteria.yearTo)
-        ) {
-            return false;
-        }
-    }
-
-    return true;
-}
-
-
-// -----------------------------------------
-// READ AND APPLY THE ADVANCED SEARCH FORM
-// -----------------------------------------
-
-if (advancedSearchForm) {
-    advancedSearchForm.addEventListener("submit", event => {
-        event.preventDefault();
-
-        const yearFrom =
-            advancedSearchFields.yearFrom.value.trim();
-
-        const yearTo =
-            advancedSearchFields.yearTo.value.trim();
-
-        if (
-            yearFrom &&
-            yearTo &&
-            Number(yearFrom) > Number(yearTo)
-        ) {
-            advancedSearchStatus.textContent =
-                "Začetno leto ne sme biti poznejše od končnega leta.";
-
-            advancedSearchFields.yearFrom.focus();
-            return;
-        }
-
-        currentAdvancedSearch = {
-            author: advancedSearchFields.author.value.trim(),
-            title: advancedSearchFields.title.value.trim(),
-            yearFrom,
-            yearTo,
-            otherAuthors:
-                advancedSearchFields.otherAuthors.value.trim(),
-            collection:
-                advancedSearchFields.collection.value.trim(),
-            isbn: advancedSearchFields.isbn.value.trim(),
-            cobissId: advancedSearchFields.cobissId.value.trim(),
-            keywords: advancedSearchFields.keywords.value.trim()
-        };
-
-        // Remove empty criteria.
-        Object.keys(currentAdvancedSearch).forEach(key => {
-            if (!currentAdvancedSearch[key]) {
-                delete currentAdvancedSearch[key];
-            }
-        });
-
-        updateBooks();
-
-        const visibleCount = books.filter(
-            book => !book.classList.contains("hidden")
-        ).length;
-
-        advancedSearchStatus.textContent = visibleCount
-            ? `Najdenih publikacij: ${visibleCount}.`
-            : "Ni rezultatov. Poskusite spremeniti iskalne pogoje.";
-    });
-}
-
-
-// -----------------------------------------
-// RESET ADVANCED SEARCH
-// -----------------------------------------
-
-if (advancedSearchForm) {
-    advancedSearchForm.addEventListener("reset", () => {
-        currentAdvancedSearch = {};
-
-        if (advancedSearchStatus) {
-            advancedSearchStatus.textContent = "";
-        }
-
-        // Reapply ordinary search and category filters.
-        updateBooks();
-    });
-}
-
-
-// -----------------------------------------
-// OPEN / CLOSE PANEL
-// -----------------------------------------
-
-function setAdvancedSearchOpen(open) {
-    if (!advancedSearchPanel || !advancedSearchToggle) {
-        return;
-    }
-
-    advancedSearchPanel.hidden = !open;
-
-    advancedSearchToggle.setAttribute(
-        "aria-expanded",
-        String(open)
-    );
-
-    if (open) {
-        advancedSearchPanel.scrollIntoView({
-            behavior: "smooth",
-            block: "nearest"
-        });
-    } else {
-        advancedSearchToggle.focus();
-    }
-}
-
-if (advancedSearchToggle && advancedSearchPanel) {
-    advancedSearchToggle.addEventListener("click", () => {
-        setAdvancedSearchOpen(advancedSearchPanel.hidden);
-    });
-}
-
-if (advancedSearchClose) {
-    advancedSearchClose.addEventListener("click", () => {
-        setAdvancedSearchOpen(false);
-    });
-}
-
-document.addEventListener("keydown", event => {
-    if (
-        event.key === "Escape" &&
-        advancedSearchPanel &&
-        !advancedSearchPanel.hidden
-    ) {
-        setAdvancedSearchOpen(false);
-    }
-});
 
 // =========================================
 // UPDATE BOOK VISIBILITY
@@ -658,11 +298,9 @@ function updateBooks() {
     // -----------------------------------------
 
     const searchWords =
-        currentSearch
-            .toLowerCase()
+        normalizeSearchText(currentSearch)
             .split(/\s+/)
             .filter(Boolean);
-
 
     // -----------------------------------------
     // CHECK EVERY BOOK
@@ -700,7 +338,7 @@ function updateBooks() {
         // -------------------------------------
 
         const bookText =
-            book.textContent.toLowerCase();
+            normalizeSearchText(book.textContent);
 
         const searchMatches =
             searchWords.length === 0 ||
@@ -710,11 +348,17 @@ function updateBooks() {
 
 
         // -------------------------------------
-        // FINAL RESULT
+        // ADVANCED SEARCH
         // -------------------------------------
 
         const advancedMatches =
-            advancedSearchMatches(book);
+            !window.AdvancedSearch ||
+            window.AdvancedSearch.matches(book);
+
+
+        // -------------------------------------
+        // FINAL RESULT
+        // -------------------------------------
 
         const shouldShow =
             categoryMatches &&
@@ -754,6 +398,8 @@ function updateBooks() {
 
 
 }
+
+window.updateBooks = updateBooks;
 
 
 // =========================================
