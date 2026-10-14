@@ -133,6 +133,11 @@
 
                     </div>
 
+                    <button class="advanced-search-toggle" id="advancedSearchToggle" type="button" aria-expanded="false"
+                        aria-controls="advancedSearchPanel">
+                        <span aria-hidden="true">⌕</span>
+                        Izbirno iskanje
+                    </button>
 
                     <button class="sort-button" id="sortButton" type="button"
                         aria-label="Razvrsti publikacije od najnovejših do najstarejših"
@@ -152,205 +157,288 @@
 
             </div>
 
-                    <!-- =========================================
+            <!-- =========================================
+     ADVANCED SEARCH PANEL
+========================================== -->
+
+            <section class="advanced-search-panel" id="advancedSearchPanel" aria-label="Izbirno iskanje publikacij"
+                hidden>
+
+                <form id="advancedSearchForm">
+
+                    <div class="advanced-search-grid">
+
+                        <div class="advanced-field">
+                            <label for="advancedAuthor">Avtor / urednik</label>
+                            <input type="search" id="advancedAuthor" name="author" placeholder="Ime in/ali priimek">
+                        </div>
+
+                        <div class="advanced-field">
+                            <label for="advancedTitle">Naslov</label>
+                            <input type="search" id="advancedTitle" name="title" placeholder="Naslov publikacije">
+                        </div>
+
+                        <div class="advanced-field advanced-year-field">
+                            <label>Leto izdaje</label>
+
+                            <div class="year-range">
+                                <input type="number" id="advancedYearFrom" name="yearFrom" min="1" max="9999"
+                                    placeholder="Od leta" aria-label="Leto izdaje od">
+
+                                <span aria-hidden="true">–</span>
+
+                                <input type="number" id="advancedYearTo" name="yearTo" min="1" max="9999"
+                                    placeholder="Do leta" aria-label="Leto izdaje do">
+                            </div>
+
+                            <p class="field-hint">
+                                Za točno leto vnesite isto leto v obe polji.
+                            </p>
+                        </div>
+
+                        <div class="advanced-field">
+                            <label for="advancedOtherAuthors">Drugi avtorji</label>
+                            <input type="search" id="advancedOtherAuthors" name="otherAuthors"
+                                placeholder="Ime in/ali priimek">
+                        </div>
+
+                        <div class="advanced-field">
+                            <label for="advancedCollection">Zbirka</label>
+                            <input type="search" id="advancedCollection" name="collection"
+                                placeholder="Ime zbirke ali serije">
+                        </div>
+
+                        <div class="advanced-field">
+                            <label for="advancedISBN">ISBN</label>
+                            <input type="search" id="advancedISBN" name="isbn" placeholder="Vnesite ISBN">
+                        </div>
+
+                        <div class="advanced-field">
+                            <label for="advancedCobiss">COBISS-ID</label>
+                            <input type="search" id="advancedCobiss" name="cobissId" placeholder="Vnesite COBISS-ID">
+                        </div>
+
+                        <div class="advanced-field">
+                            <label for="advancedKeywords">Ključne besede</label>
+                            <input type="search" id="advancedKeywords" name="keywords"
+                                placeholder="Vnesite ključne besede">
+                        </div>
+
+                    </div>
+
+                    <div class="advanced-search-actions">
+                        <button type="reset" class="advanced-clear-button">
+                            Počisti
+                        </button>
+
+                        <button type="submit" class="advanced-submit-button">
+                            <span aria-hidden="true">⌕</span>
+                            Išči
+                        </button>
+                    </div>
+
+                </form>
+            </section>
+
+            <!-- =========================================
      FILTERS
 ========================================== -->
 
-        <section class="filters">
+            <section class="filters">
 
-            <!-- =====================================
+                <!-- =====================================
              MAIN CATEGORY LEVEL
         ====================================== -->
 
-            <div class="filter-buttons main-category-buttons">
+                <div class="filter-buttons main-category-buttons">
 
 
-                <!-- ALL -->
+                    <!-- ALL -->
 
-                <button class="filter category-main active" data-category="all" type="button">
-                    Vse
-                </button>
-
-
-                <!-- RAZREDI SAZU -->
-
-                <button class="filter category-main" data-category="razredi-sazu" type="button" aria-expanded="false"
-                    aria-controls="razrediSubmenu">
-                    Razredi SAZU
-
-                    <span class="submenu-arrow">▾</span>
-                </button>
+                    <button class="filter category-main active" data-category="all" type="button">
+                        Vse
+                    </button>
 
 
-                <!-- ZBIRKE SAZU -->
+                    <!-- RAZREDI SAZU -->
 
-                <button class="filter category-main" data-category="zbirke-sazu" type="button" aria-expanded="false"
-                    aria-controls="zbirkeSubmenu">
-                    Zbirke SAZU
+                    <button class="filter category-main" data-category="razredi-sazu" type="button"
+                        aria-expanded="false" aria-controls="razrediSubmenu">
+                        Razredi SAZU
 
-                    <span class="submenu-arrow">▾</span>
-                </button>
-
-
-                <!-- SERIJSKE PUBLIKACIJE SAZU -->
-
-                <button class="filter category-main" data-category="serije-sazu" type="button" aria-expanded="false"
-                    aria-controls="serije-sazuSubmenu">
-                    Serijske publikacije SAZU
-
-                    <span class="submenu-arrow">▾</span>
-                </button>
-
-                <!-- SERIJSKE PUBLIKACIJE SAZU in ZRC - NO SUBMENU -->
-
-                <button class="filter category-main" data-category="serije-zrcsazu" type="button">
-                    Serijske publikacije SAZU in ZRC SAZU
-
-                </button>
-
-                <!-- PUBLIKACIJE S POMOČJO SAZU - NO SUBMENU -->
-
-                <button class="filter category-main" data-category="pomoc-sazu" type="button">
-                    Publikacije, izšle s pomočjo SAZU
-
-                </button>
-
-                <!-- PUBLIKACIJE V SOZALOŽNIŠTVU SAZU - NO SUBMENU -->
-
-                <button class="filter category-main" data-category="sozaloz-sazu" type="button">
-                    Sozaložništvo SAZU
-
-                </button>
-
-                <!-- SPLOSNO — NO SUBMENU -->
-
-                <button class="filter category-main" data-category="splosno" type="button">
-                    Splošno
-                </button>
-            </div>
+                        <span class="submenu-arrow">▾</span>
+                    </button>
 
 
-            <!-- =====================================
+                    <!-- ZBIRKE SAZU -->
+
+                    <button class="filter category-main" data-category="zbirke-sazu" type="button" aria-expanded="false"
+                        aria-controls="zbirkeSubmenu">
+                        Zbirke SAZU
+
+                        <span class="submenu-arrow">▾</span>
+                    </button>
+
+
+                    <!-- SERIJSKE PUBLIKACIJE SAZU -->
+
+                    <button class="filter category-main" data-category="serije-sazu" type="button" aria-expanded="false"
+                        aria-controls="serije-sazuSubmenu">
+                        Serijske publikacije SAZU
+
+                        <span class="submenu-arrow">▾</span>
+                    </button>
+
+                    <!-- SERIJSKE PUBLIKACIJE SAZU in ZRC - NO SUBMENU -->
+
+                    <button class="filter category-main" data-category="serije-zrcsazu" type="button">
+                        Serijske publikacije SAZU in ZRC SAZU
+
+                    </button>
+
+                    <!-- PUBLIKACIJE S POMOČJO SAZU - NO SUBMENU -->
+
+                    <button class="filter category-main" data-category="pomoc-sazu" type="button">
+                        Publikacije, izšle s pomočjo SAZU
+
+                    </button>
+
+                    <!-- PUBLIKACIJE V SOZALOŽNIŠTVU SAZU - NO SUBMENU -->
+
+                    <button class="filter category-main" data-category="sozaloz-sazu" type="button">
+                        Sozaložništvo SAZU
+
+                    </button>
+
+                    <!-- SPLOSNO — NO SUBMENU -->
+
+                    <button class="filter category-main" data-category="splosno" type="button">
+                        Splošno
+                    </button>
+                </div>
+
+
+                <!-- =====================================
              RAZREDI SAZU SUBMENU
         ====================================== -->
 
-            <div class="subcategory-wrapper" id="razrediSubmenu" aria-hidden="true">
+                <div class="subcategory-wrapper" id="razrediSubmenu" aria-hidden="true">
 
-                <div class="subcategory-heading">
-                    Razredi SAZU
+                    <div class="subcategory-heading">
+                        Razredi SAZU
+                    </div>
+
+
+                    <div class="filter-buttons subcategory-buttons">
+
+
+                        <button class="filter subcategory" data-subcategory="I. razred" type="button">
+                            I. Razred za zgodovinske in družbene vede
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="II. razred" type="button">
+                            II. Razred za filološke in literarne vede
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="III. razred" type="button">
+                            III. Razred za matematične, fizikalne, kemijske in tehniške vede
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="IV. razred" type="button">
+                            IV. Razred za naravoslovne vede
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="V. razred" type="button">
+                            V. Razred za umetnosti
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="VI. razred" type="button">
+                            VI. Razred za medicinske vede
+                        </button>
+
+                        <button class="filter subcategory" data-subcategory="drugo" type="button">
+                            Drugo
+                        </button>
+
+                    </div>
+
                 </div>
 
 
-                <div class="filter-buttons subcategory-buttons">
-
-
-                    <button class="filter subcategory" data-subcategory="I. razred" type="button">
-                        I. Razred za zgodovinske in družbene vede
-                    </button>
-
-
-                    <button class="filter subcategory" data-subcategory="II. razred" type="button">
-                        II. Razred za filološke in literarne vede
-                    </button>
-
-
-                    <button class="filter subcategory" data-subcategory="III. razred" type="button">
-                        III. Razred za matematične, fizikalne, kemijske in tehniške vede
-                    </button>
-
-
-                    <button class="filter subcategory" data-subcategory="IV. razred" type="button">
-                        IV. Razred za naravoslovne vede
-                    </button>
-
-
-                    <button class="filter subcategory" data-subcategory="V. razred" type="button">
-                        V. Razred za umetnosti
-                    </button>
-
-
-                    <button class="filter subcategory" data-subcategory="VI. razred" type="button">
-                        VI. Razred za medicinske vede
-                    </button>
-
-                    <button class="filter subcategory" data-subcategory="drugo" type="button">
-                        Drugo
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- =====================================
+                <!-- =====================================
              ZBIRKE SAZU SUBMENU
         ====================================== -->
 
-            <div class="subcategory-wrapper" id="zbirkeSubmenu" aria-hidden="true">
+                <div class="subcategory-wrapper" id="zbirkeSubmenu" aria-hidden="true">
 
-                <div class="subcategory-heading">
-                    Zbirke SAZU
+                    <div class="subcategory-heading">
+                        Zbirke SAZU
+                    </div>
+
+
+                    <div class="filter-buttons subcategory-buttons">
+
+
+                        <button class="filter subcategory" data-subcategory="razprave I." type="button">
+                            Razprave I. Razreda za zgodovinske in družbene vede
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="razprave II." type="button">
+                            Razprave II. Razreda za filološke in literarne vede
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="razprave V." type="button">
+                            Razprave V. Razreda za umetnosti
+                        </button>
+
+                    </div>
+
                 </div>
 
 
-                <div class="filter-buttons subcategory-buttons">
-
-
-                    <button class="filter subcategory" data-subcategory="razprave I." type="button">
-                        Razprave I. Razreda za zgodovinske in družbene vede
-                    </button>
-
-
-                    <button class="filter subcategory" data-subcategory="razprave II." type="button">
-                        Razprave II. Razreda za filološke in literarne vede
-                    </button>
-
-
-                    <button class="filter subcategory" data-subcategory="razprave V." type="button">
-                        Razprave V. Razreda za umetnosti
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- =====================================
+                <!-- =====================================
              SERIJE SAZU SUBMENU
         ====================================== -->
 
-            <div class="subcategory-wrapper" id="serije-sazuSubmenu" aria-hidden="true">
+                <div class="subcategory-wrapper" id="serije-sazuSubmenu" aria-hidden="true">
 
-                <div class="subcategory-heading">
-                    Serijske publikacije SAZU
+                    <div class="subcategory-heading">
+                        Serijske publikacije SAZU
+                    </div>
+
+
+                    <div class="filter-buttons subcategory-buttons">
+
+
+                        <button class="filter subcategory" data-subcategory="fagopyrum" type="button">
+                            Fagopyrum
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="folia" type="button">
+                            Folia Biologica et Geologica
+                        </button>
+
+
+                        <button class="filter subcategory" data-subcategory="letopis" type="button">
+                            Letopis SAZU
+                        </button>
+
+                    </div>
+
                 </div>
 
 
-                <div class="filter-buttons subcategory-buttons">
-
-
-                    <button class="filter subcategory" data-subcategory="fagopyrum" type="button">
-                        Fagopyrum
-                    </button>
-
-
-                    <button class="filter subcategory" data-subcategory="folia" type="button">
-                        Folia Biologica et Geologica
-                    </button>
-
-
-                    <button class="filter subcategory" data-subcategory="letopis" type="button">
-                        Letopis SAZU
-                    </button>
-
                 </div>
 
-            </div>
-
-
-            </div>
-
-        </section>
+            </section>
 
 
             <div class="book-grid" id="bookGrid">
