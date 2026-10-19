@@ -106,6 +106,24 @@ function getValues(value) {
 
 }
 
+function getPublicationYears(book) {
+    const value = (book.dataset.year || "").trim();
+    const match = value.match(/^(\d{1,4})(?:\s*[-–—]\s*(\d{1,4}))?$/);
+
+    if (!match) {
+        return { start: 0, end: 0 };
+    }
+
+    const start = Number(match[1]);
+    const end = match[2] ? Number(match[2]) : start;
+
+    if (!start || end < start) {
+        return { start: 0, end: 0 };
+    }
+
+    return { start, end };
+}
+
 
 // =========================================
 // CLOSE ALL SUBMENUS
@@ -340,10 +358,32 @@ function updateBooks() {
         const bookText =
             normalizeSearchText(book.textContent);
 
+        const publicationYears = getPublicationYears(book);
+
+        const yearSearchMatches =
+            searchWords.length === 0 ||
+            searchWords.every(word => {
+                if (!/^\d{1,4}$/.test(word)) {
+                    return false;
+                }
+
+                const year = Number(word);
+
+                return (
+                    publicationYears.start > 0 &&
+                    year >= publicationYears.start &&
+                    year <= publicationYears.end
+                );
+            });
+
         const searchMatches =
             searchWords.length === 0 ||
             searchWords.every(word =>
                 bookText.includes(word)
+            ) ||
+            (
+                searchWords.length === 1 &&
+                yearSearchMatches
             );
 
 
@@ -419,11 +459,8 @@ function sortBooks() {
 
     bookArray.sort((a, b) => {
 
-        const yearA =
-            Number(a.dataset.year) || 0;
-
-        const yearB =
-            Number(b.dataset.year) || 0;
+        const yearA = getPublicationYears(a).start;
+        const yearB = getPublicationYears(b).start;
 
         const orderA =
             Number(a.dataset.order) || 999;

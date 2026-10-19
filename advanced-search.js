@@ -53,13 +53,13 @@
     // =====================================
 
     function normalizeSearchText(value) {
-    return String(value || "")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/-/g, "")
-        .toLocaleLowerCase("sl")
-        .trim();
-}
+        return String(value || "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/-/g, "")
+            .toLocaleLowerCase("sl")
+            .trim();
+    }
 
 
     // =====================================
@@ -196,7 +196,16 @@
             null
         );
 
-        const year = Number(book.dataset.year) || 0;
+        const yearValue = (book.dataset.year || "").trim();
+
+        const yearMatch = yearValue.match(
+            /^(\d{1,4})(?:\s*[-–—]\s*(\d{1,4}))?$/
+        );
+
+        const yearStart = yearMatch ? Number(yearMatch[1]) : 0;
+        const yearEnd = yearMatch
+            ? Number(yearMatch[2] || yearMatch[1])
+            : 0;
 
 
         // ---------------------------------
@@ -311,21 +320,25 @@
         // ---------------------------------
 
         if (criteria.yearFrom || criteria.yearTo) {
-            if (!year) {
+            if (!yearStart || !yearEnd) {
                 return false;
             }
 
-            if (
-                criteria.yearFrom &&
-                year < Number(criteria.yearFrom)
-            ) {
-                return false;
-            }
+            const requestedFrom = criteria.yearFrom
+                ? Number(criteria.yearFrom)
+                : 1;
 
-            if (
-                criteria.yearTo &&
-                year > Number(criteria.yearTo)
-            ) {
+            const requestedTo = criteria.yearTo
+                ? Number(criteria.yearTo)
+                : 9999;
+
+            // Match when the publication's date range
+            // overlaps the requested date range.
+            const yearMatches =
+                yearStart <= requestedTo &&
+                yearEnd >= requestedFrom;
+
+            if (!yearMatches) {
                 return false;
             }
         }
