@@ -563,6 +563,18 @@ SEARCH + SORT
 
 }
 
+#bookSearch::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+#bookSearch::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
 #clearSearch:hover {
     color: #000;
 }
