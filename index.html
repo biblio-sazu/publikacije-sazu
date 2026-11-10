@@ -31,7 +31,7 @@
 
             <div class="brand">
 
-                <span href="#" class="brand-name">
+                <span class="brand-name" onclick="window.location.reload();" href="#">
                     Publikacije SAZU
                 </span>
 
@@ -110,7 +110,9 @@
                 <div class="section-heading-left">
 
                     <h2>
-                        Publikacije
+                        <a class="brand-name" onclick="window.location.reload();" href="#">
+                            Publikacije
+                        </a>
                     </h2>
 
                     <span class="book-count">
@@ -271,6 +273,11 @@
                         <span class="submenu-arrow">▾</span>
                     </button>
 
+                    <!-- SPLOSNO — NO SUBMENU -->
+
+                    <button class="filter category-main" data-category="splosno" type="button">
+                        Splošno
+                    </button>
 
                     <!-- ZBIRKE SAZU -->
 
@@ -312,11 +319,7 @@
 
                     </button>
 
-                    <!-- SPLOSNO — NO SUBMENU -->
 
-                    <button class="filter category-main" data-category="splosno" type="button">
-                        Splošno
-                    </button>
                 </div>
 
 
@@ -361,10 +364,6 @@
 
                         <button class="filter subcategory" data-subcategory="VI. razred" type="button">
                             VI. Razred za medicinske vede
-                        </button>
-
-                        <button class="filter subcategory" data-subcategory="drugo" type="button">
-                            Drugo
                         </button>
 
                     </div>
@@ -575,8 +574,7 @@
                  BOOK 3
             ================================== -->
 
-                <article class="book-card" data-category="razredi-sazu" data-subcategory="I. razred, razprave I."
-                    data-year="2025"
+                <article class="book-card" data-category="splosno" data-year="2025"
                     data-title="Sociologija: iz preteklosti za prihodnost: ob 60-letnici Slovenskega sociološkega društva"
                     data-author="Zdravko Mlinar" data-other-authors="" data-collection="" data-isbn="978-961-268-115-9"
                     data-cobiss-id="240912387" data-keywords="sociologija, družbene vede, družboslovno raziskovanje">
@@ -1815,8 +1813,8 @@
                     </a>
                 </article>
 
-                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka"
-                    data-year="1963" data-order=""
+                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka" data-year="1963"
+                    data-order=""
                     data-title="Slovenska bibliografija. Članki in leposlovje v časopisju in zbornikih 1945-1950"
                     data-author="Janez Logar, Štefka Bulovec, Ančka Posavec" data-other-authors=" "
                     data-collection="Biblioteka" data-isbn="" data-cobiss-id="6147"
@@ -1848,8 +1846,8 @@
                     </a>
                 </article>
 
-                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka"
-                    data-year="1962" data-order="" data-title="Bibliografsko kazalo Ljubljanskega zvona: 1881-1941"
+                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka" data-year="1962"
+                    data-order="" data-title="Bibliografsko kazalo Ljubljanskega zvona: 1881-1941"
                     data-author="Rudolf Kodela, Jože Munda, Niko Rupel" data-other-authors=" "
                     data-collection="Biblioteka" data-isbn="" data-cobiss-id="39683"
                     data-keywords="Ljubljanski zvon, periodika, 1881, 1941, bibliografska kazala, bibliografije">
@@ -1913,8 +1911,8 @@
                     </a>
                 </article>
 
-                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka"
-                    data-year="1978" data-order=""
+                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka" data-year="1978"
+                    data-order=""
                     data-title="Bibliografija prekmurskih tiskov od 1715 do 1919, Bibliographie der Drucke im Dialekt von Prekmurje von 1715 bis 1919"
                     data-author="Ivan Škafar" data-other-authors="Vilko Novak" data-collection="Biblioteka" data-isbn=""
                     data-cobiss-id="1099777"
@@ -2112,6 +2110,321 @@
                     </a>
                 </article>
 
+                <article class="book-card" data-category="splosno" data-subcategory="" data-year="2026" data-order=""
+                    data-title="Limits to Growth: Beyond Globalisation and Individualisation"
+                    data-author="Zdravko Mlinar" data-other-authors="Henry Teune" data-collection=""
+                    data-isbn="978-961-268-137-1" data-cobiss-id="300858371"
+                    data-keywords="družbeni razvoj, globalizacija, sociologija, individualizacija">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/41" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/splosno/limits.jpg" alt="Naslovnica knjige Limits of Growth">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                            </p>
+                            <h3>
+                                Limits to Growth: Beyond Globalisation and Individualisation
+                            </h3>
+                            <p class="book-author">
+                                Zdravko Mlinar
+                            </p>
+                            <p class="book-year">
+                                2026
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka" data-year="2013"
+                    data-order="" data-title="Ljubljana kot novi Rim: Akademija operozov in baročna Italija"
+                    data-author="Luka Vidmar" data-other-authors="Petra Vide Ogrin, Boris Golec"
+                    data-collection="Biblioteka SAZU" data-isbn="978-961-268-019-0" data-cobiss-id="269358336"
+                    data-keywords="Ljubljana, kulturna zgodovina, umetnostna zgodovina, literarna zgodovina, 18. stoletje, Academia operosorum Labacenskum, barok, Italija">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/33" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/biblioteka/biblioteka15.jpg"
+                                alt="Naslovnica knjige Ljubljana kot novi Rim">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Biblioteka 15
+                            </p>
+                            <h3>
+                                Ljubljana kot novi Rim: Akademija operozov in baročna Italija
+                            </h3>
+                            <p class="book-author">
+                                Luka Vidmar
+                            </p>
+                            <p class="book-year">
+                                2013
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka, bibliografije"
+                    data-year="2018" data-order="1"
+                    data-title="Bibliografija publikacij Slovenske akademije znanosti in umetnosti v letih 1991-2015: Ob 80. obletnici ustanovitve Slovenske akademije znanosti in umetnosti"
+                    data-author="Mateja Švajncer, Marjana Benčina, Simona Frankl, Mojca Uran"
+                    data-other-authors="Tadej Bajd" data-collection="Biblioteka SAZU" data-isbn="978-961-268-019-0"
+                    data-cobiss-id="296132608"
+                    data-keywords="Slovenska akademija znanosti in umetnosti, publikacije, 1991-2015, bibliografije">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/39" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/biblioteka/biblioteka16.jpg"
+                                alt="Naslovnica knjige Bibliografija publikacij SAZU 1991-2015">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Biblioteka 16
+                            </p>
+                            <h3>
+                                Bibliografija publikacij Slovenske akademije znanosti in umetnosti v letih 1991-2015
+                            </h3>
+                            <p class="book-author">
+                                Mateja Švajncer, Marjana Benčina, Simona Frankl, Mojca Uran
+                            </p>
+                            <p class="book-year">
+                                2018
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka" data-year="2018"
+                    data-order="2" data-title="Srednjeveški rokopisi in rokopisni fragmenti: Arhiv Republike Slovenije"
+                    data-author="Nataša Golob" data-other-authors="Peter Štih" data-collection="Biblioteka SAZU"
+                    data-isbn="978-961-268-056-5" data-cobiss-id="297240576"
+                    data-keywords="srednjeveški rokopisi, rokopisi, Slovenija, srednji vek">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/35" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/biblioteka/biblioteka17.jpg" alt="Rokopisi in fragmenti Arhiv RS">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Biblioteka 17
+                            </p>
+                            <h3>
+                                Srednjeveški rokopisi in rokopisni fragmenti: Arhiv Republike Slovenije
+                            </h3>
+                            <p class="book-author">
+                                Nataša Golob
+                            </p>
+                            <p class="book-year">
+                                2018
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka" data-year="2018"
+                    data-order="3" data-title="Alfabetarij k Tezavru slovenskega ljudskega jezika na Koroškem"
+                    data-author="Ludvik Karničar, Andrejka Žejn" data-other-authors=" "
+                    data-collection="Biblioteka SAZU" data-isbn="978-961-268-060-2" data-cobiss-id="298389248"
+                    data-keywords="slovenščina, narečja, Koroška, leksikografija, slovarji, tezavri, besedišče, dialektologija">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/36" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/biblioteka/biblioteka18.jpg" alt="naslovnica Alfabetarij k Tezavru">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Biblioteka 18
+                            </p>
+                            <h3>
+                                Alfabetarij k Tezavru slovenskega ljudskega jezika na Koroškem
+                            </h3>
+                            <p class="book-author">
+                                Ludvik Karničar, Andrejka Žejn
+                            </p>
+                            <p class="book-year">
+                                2018
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka" data-year="2023"
+                    data-order="" data-title="Bibliografija Franceta Balantiča"
+                    data-author="Mateja Švajncer, Mojca Mlinar Strgar, Mojca Uran, Simona Frankl, Marjana Benčina"
+                    data-other-authors="Marjan Dolgan, France Pibernik, Matija Ogrin" data-collection="Biblioteka SAZU"
+                    data-isbn="978-961-05-0794-9" data-cobiss-id="89458435"
+                    data-keywords="France Balantič, 1921-1943, osebne bibliografije, slovenska književnost, literarne študije, bibliografije">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/40" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/biblioteka/biblioteka19.jpg" alt="naslovnica Bibliografija Balantič">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Biblioteka 19
+                            </p>
+                            <h3>
+                                Bibliografija Franceta Balantiča
+                            </h3>
+                            <p class="book-author">
+                                Mateja Švajncer, Mojca Mlinar Strgar, Mojca Uran, Simona Frankl, Marjana Benčina
+                            </p>
+                            <p class="book-year">
+                                2023
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka" data-year="2021"
+                    data-order=""
+                    data-title="Srednjeveški rokopisi in rokopisni fragmenti: Narodna in univerzitetna knjižnica, 1. del"
+                    data-author="Nataša Golob" data-other-authors="Peter Štih" data-collection="Biblioteka SAZU"
+                    data-isbn="978-961-268-079-4" data-cobiss-id="83299331"
+                    data-keywords="srednjeveški rokopisi, Slovenija, Narodna in univerzitetna knjižnica, rokopisi, srednji vek">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/37" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/biblioteka/biblioteka20.jpg" alt="naslovnica Rokopisi in fragmenti NUK 1">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Biblioteka 20
+                            </p>
+                            <h3>
+                                Srednjeveški rokopisi in rokopisni fragmenti: Narodna in univerzitetna knjižnica, 1. del
+                            </h3>
+                            <p class="book-author">
+                                Nataša Golob
+                            </p>
+                            <p class="book-year">
+                                2021
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka" data-year="2025"
+                    data-order=""
+                    data-title="Srednjeveški rokopisi in rokopisni fragmenti: Narodna in univerzitetna knjižnica, 2. del"
+                    data-author="Nataša Golob" data-other-authors="Peter Štih" data-collection="Biblioteka SAZU"
+                    data-isbn="978-961-268-114-2" data-cobiss-id="83299331"
+                    data-keywords="srednjeveški rokopisi, Slovenija, Narodna in univerzitetna knjižnica, rokopisi, srednji vek">
+
+                    <a href="https://omp.sazu.si/library/catalog/book/38" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/biblioteka/biblioteka21.jpg" alt="naslovnica Rokopisi in fragmenti NUK 2">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Biblioteka 21
+                            </p>
+                            <h3>
+                                Srednjeveški rokopisi in rokopisni fragmenti: Narodna in univerzitetna knjižnica, 2. del
+                            </h3>
+                            <p class="book-author">
+                                Nataša Golob
+                            </p>
+                            <p class="book-year">
+                                2025
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka, bibliografije"
+                    data-year="1976" data-order=""
+                    data-title="Biografije in bibliografije znanstvenih in strokovnih sodelavcev Slovenske akademije znanosti in umetnosti"
+                    data-author="Jože Munda, Marija Fabjančič, Sonja Stergaršek, Vida Stanovnik, Marija Klemenčič, Vida Urek"
+                    data-other-authors=" " data-collection="Biblioteka SAZU" data-isbn="" data-cobiss-id="1099521"
+                    data-keywords="znanstvene ustanove, akademije, znanstvenoraziskovalno delo, zborniki, Slovenska akademija znanosti in umetnosti, bibliografije, člani, biografije">
+
+                    <a href=" https://dirros.openscience.si/IzpisGradiva.php?id=33155 " class="book-link"
+                        target="_blank" rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/biblioteka/biblioteka5.jpg" alt="naslovnica Biografije 1976">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Biblioteka 5
+                            </p>
+                            <h3>
+                                Biografije in bibliografije znanstvenih in strokovnih sodelavcev Slovenske akademije
+                                znanosti in umetnosti</h3>
+                            <p class="book-author">
+                                Jože Munda (ur.), Marija Fabjančič (ur.), Sonja Stergaršek (ur.), Vida Stanovnik (ur.)
+                            </p>
+                            <p class="book-year">
+                                1976
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="zbirke-sazu" data-subcategory="biblioteka, bibliografije"
+                    data-year="1988" data-order=""
+                    data-title="Biografije in bibliografije raziskovalcev Znanstvenoraziskovalnega centra SAZU, II. knjiga, 1976-1985"
+                    data-author=" Vida Stanovnik, Vida Urek" data-other-authors=" " data-collection="Biblioteka SAZU"
+                    data-isbn="" data-cobiss-id="541812" data-keywords="biografij, bibliografije, ZRC SAZU">
+
+                    <a href=" https://dirros.openscience.si/IzpisGradiva.php?id=33611" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/biblioteka/biblioteka10.jpg" alt="naslovnica Biografije 1976">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Biblioteka 10
+                            </p>
+                            <h3>
+                                Biografije in bibliografije raziskovalcev Znanstvenoraziskovalnega centra SAZU:
+                                1976-1985</h3>
+                            <p class="book-author">
+                                Vida Urek (ur.) </p>
+                            <p class="book-year">
+                                1988
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
 
             </div>
 
