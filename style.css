@@ -18,6 +18,13 @@ body {
     min-height: 100%;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
 body {
     min-height: 100vh;
     margin: 0;
