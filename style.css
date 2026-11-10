@@ -67,7 +67,7 @@ VARIABLES
 
     /* Book geometry */
     --card-padding: 17px;
-    --book-cover-width: 85px;
+    --book-cover-width: 100px;
     --book-cover-gap: 15px;
     --overlay-gap: 5px;
 
@@ -748,7 +748,7 @@ BOOK COVER
 
 .book-icon {
     width: var(--book-cover-width);
-    height: 112px;
+    height: 130px;
 
     flex: 0 0 var(--book-cover-width);
 
@@ -781,8 +781,6 @@ BOOK COVER
 
     image-rendering: auto;
 
-    backface-visibility: hidden;
-    transform: translateZ(0);
 }
 
 
@@ -796,7 +794,7 @@ BOOK CONTENT
 
     flex: 1 1 auto;
 
-    padding-right: 24px;
+    padding-right: 8px;
 
 }
 
@@ -1234,11 +1232,9 @@ MOBILE
     }
 
     .book-icon {
-        width: 87px;
-        height: 116px;
-
-        flex-basis: 87px;
-
+        width: 95px;
+        height: 125px;
+        flex-basis: 95px;
         margin-right: 15px;
     }
 
@@ -1501,11 +1497,9 @@ VERY SMALL SCREENS
     }
 
     .book-icon {
-        width: 72px;
-        height: 104px;
-
-        flex-basis: 72px;
-
+        width: 80px;
+        height: 110px;
+        flex-basis: 80px;
         margin-right: 12px;
     }
 
@@ -1933,23 +1927,3 @@ REDUCED MOTION
     }
 
 }
-
-/* =========================================
-FIX FOR HIGH-RES BOOK COVERS ONLY
-========================================= */
-
-.books-card img {
-    /* 1. Standardize to high-quality smooth interpolation */
-    image-rendering: auto; 
-    
-    /* 2. Hardware acceleration trick: forces browsers to use 
-       high-fidelity GPU blending instead of fast CPU pixel-skipping */
-    transform: translateZ(0);
-    will-change: transform;
-    
-    /* 3. Subtle blur override: stops the browser's 
-       aggressive contrast sharpening on massive files */
-    filter: blur(0px); 
-}
-
-
