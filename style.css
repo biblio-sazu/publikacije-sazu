@@ -781,6 +781,11 @@ BOOK COVER
 
     image-rendering: auto;
 
+    -webkit-transform: none;
+    transform: none;
+
+    filter: none;
+
 }
 
 
