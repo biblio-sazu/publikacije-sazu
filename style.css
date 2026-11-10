@@ -18,13 +18,6 @@ body {
     min-height: 100%;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-}
-
 body {
     min-height: 100vh;
     margin: 0;
@@ -1941,5 +1934,22 @@ REDUCED MOTION
 
 }
 
+/* =========================================
+FIX FOR HIGH-RES BOOK COVERS ONLY
+========================================= */
+
+.books-section img {
+    /* 1. Standardize to high-quality smooth interpolation */
+    image-rendering: auto; 
+    
+    /* 2. Hardware acceleration trick: forces browsers to use 
+       high-fidelity GPU blending instead of fast CPU pixel-skipping */
+    transform: translateZ(0);
+    will-change: transform;
+    
+    /* 3. Subtle blur override: stops the browser's 
+       aggressive contrast sharpening on massive files */
+    filter: blur(0px); 
+}
 
 
