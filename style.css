@@ -1938,7 +1938,7 @@ REDUCED MOTION
 FIX FOR HIGH-RES BOOK COVERS ONLY
 ========================================= */
 
-.books-section img {
+.books-card img {
     /* 1. Standardize to high-quality smooth interpolation */
     image-rendering: auto; 
     
