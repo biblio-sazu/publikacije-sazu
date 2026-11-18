@@ -239,18 +239,17 @@ INTRO TEXT
 }
 
 .intro-text a {
-    color: #000;
+    color: var(--gold);
 
-    font-weight: 700;
+    font-weight: 400;
 
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
+    text-decoration: none;
 
+    transition: color var(--transition);
 }
 
 .intro-text a:hover {
-    color: #a67c32;
+    color: var(--blue);
 }
 
 /* =========================================
