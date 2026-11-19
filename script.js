@@ -1310,3 +1310,47 @@ updateSortButton();
 sortBooks();
 
 updateBooks();
+
+// =========================================
+// INTRO TEXT - LETOPIS LINK
+// =========================================
+
+const letopisIntroLink = document.getElementById(
+    "letopisIntroLink"
+);
+
+if (letopisIntroLink) {
+
+    letopisIntroLink.addEventListener(
+        "click",
+        event => {
+
+            event.preventDefault();
+
+            // Find Splošno button
+            const splosnoButton = document.querySelector(
+                '.category-main[data-category="splosno"]'
+            );
+
+            // Find Letopis SAZU submenu button
+            const letopisButton = document.querySelector(
+                '.subcategory[data-subcategory="letopis"]'
+            );
+
+            if (!splosnoButton || !letopisButton) {
+                return;
+            }
+
+            // Open Splošno and activate Letopis SAZU
+            letopisButton.click();
+
+            // Scroll to the category menu
+            document.querySelector(".filters").scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+    );
+
+}

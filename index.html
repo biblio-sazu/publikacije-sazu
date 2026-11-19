@@ -65,38 +65,27 @@
         <section class="intro-text">
 
             <p>
-                SAZU prispeva k razvoju znanstvene misli in umetniške ustvarjalnosti tudi z izdajanjem publikacij. Vsako
-                leto izda Letopis, v katerem sta predstavljena njeno delo in organizacija. Pri Akademiji redno
-                izhajata dve reviji, <em>Folia biologica et geologica</em> in <em>Fagopyrum</em> in redne zbirke pod
-                okriljem <a href="https://www.sazu.si/clani-sazu" target="_blank" rel="noopener">razredov</a>.
+                SAZU prispeva k razvoju znanstvene misli in umetniške ustvarjalnosti tudi z izdajanjem publikacij in
+                sodelovanjem pri izdajah drugih ustanov. Delovanje SAZU je opisano v serijski publikaciji <a
+                    href="#splosnoSubmenu" id="letopisIntroLink">Letopis</a>.
             </p>
             <p>
-                Pri SAZU izhajajo tudi edicije, ki spremljajo simpozije ali znanstvena srečanja, in druge monografije.
+                V spodnjih zavihkih so na voljo spletne in naknadno digitalizirane izdaje, pri katerih je bila SAZU
+                izdajateljica, soizdajateljica ali ki so izšle z njenim sodelovanjem.
             </p>
             <p>
-                Akademija je včasih v vlogi soizdajateljice, letno pa namenja tudi sredstva po programu za tisk
-                znanstvenih in umetnostnih publikacij drugih založb. Za publikacijsko dejavnost sta pod njenim okriljem
-                v določenem obdobju skrbeli tudi <a href="https://www.sazu.si/fundacija-dr-bruno-breschi"
-                    target="_blank" rel="noopener">Fundacija dr. Bruno Breschi</a> in <a
-                    href="https://www.sazu.si/fundacija-janez-vajkard-valvasor" target="_blank" rel="noopener">Fundacija
-                    Janez Vajkard Valvasor</a>.
-            </p>
-            <p>
-                Med digitaliziranimi publikacijami je treba izpostaviti <em>Slovenski biografski leksikon</em>
-                (1925–1991), ki
-                ga nadaljuje <em>Novi Slovenski biografski leksikon</em>; skupaj s <em>Primorskim slovenskim biografskim
-                    leksikonom</em>
-                sestavljajo spletni portal <a href="https://www.slovenska-biografija.si/" target="_blank"
-                    rel="noopener">Slovenska biografija</a>, ta pa je vključena v mednarodni biografski portal
-                <a href="https://www.biographie-portal.eu/Biographien/Hauptseite" target="_blank"
+                Izmed del, ki so objavljena na zunanjih spletnih portalih, izpostavljamo Slovar slovenskega knjižnega
+                jezika in Slovenski pravopis 2001 na portalu <a href="https://fran.si/" target="_blank"
+                    rel="noopener">Fran</a> ter Slovenski biografski leksikon in Novi Slovenski
+                biografski leksikon, ki sta vključena v portal <a href="https://www.slovenska-biografija.si/"
+                    target="_blank" rel="noopener">Slovenska biografija</a>, ta pa v mednarodni biografski
+                portal <a href="https://www.biographie-portal.eu/Biographien/Hauptseite" target="_blank"
                     rel="noopener">Biographie-Portal</a>, kjer so tudi strani v slovenskem jeziku.
             </p>
             <p>
-                Biblioteka SAZU opravlja obsežno zamensko dejavnost lastnih izdaj s sorodnimi ustanovami doma in po
-                svetu, prav tako pa je publikacije SAZU mogoče tudi kupiti v knjigarni Azil, spletni knjigarni Buča in v
-                prodajalnah Mladinske knjige.
+                Publikacije SAZU je mogoče kupiti v knjigarni Azil, spletni knjigarni Buča in v prodajalnah Mladinske
+                knjige.
             </p>
-
         </section>
 
         <!-- =========================================
@@ -263,6 +252,14 @@
                         Vse
                     </button>
 
+                    <!-- SPLOSNO -->
+
+                    <button class="filter category-main" data-category="splosno" type="button" aria-expanded="false"
+                        aria-controls="splosnoSubmenu">
+                        Splošno
+
+                        <span class="submenu-arrow">▾</span>
+                    </button>
 
                     <!-- RAZREDI SAZU -->
 
@@ -271,12 +268,6 @@
                         Razredi SAZU
 
                         <span class="submenu-arrow">▾</span>
-                    </button>
-
-                    <!-- SPLOSNO — NO SUBMENU -->
-
-                    <button class="filter category-main" data-category="splosno" type="button">
-                        Splošno
                     </button>
 
                     <!-- ZBIRKE SAZU -->
@@ -289,15 +280,6 @@
                     </button>
 
 
-                    <!-- SERIJSKE PUBLIKACIJE SAZU -->
-
-                    <button class="filter category-main" data-category="serije-sazu" type="button" aria-expanded="false"
-                        aria-controls="serije-sazuSubmenu">
-                        Serijske publikacije SAZU
-
-                        <span class="submenu-arrow">▾</span>
-                    </button>
-
                     <!-- SERIJSKE PUBLIKACIJE SAZU in ZRC - NO SUBMENU -->
 
                     <button class="filter category-main" data-category="serije-zrcsazu" type="button">
@@ -308,20 +290,32 @@
                     <!-- PUBLIKACIJE S POMOČJO SAZU - NO SUBMENU -->
 
                     <button class="filter category-main" data-category="pomoc-sazu" type="button">
-                        Publikacije, izšle s pomočjo SAZU
+                        V sodelovanju s SAZU
 
                     </button>
-
-                    <!-- PUBLIKACIJE V SOZALOŽNIŠTVU SAZU - NO SUBMENU -->
-
-                    <button class="filter category-main" data-category="sozaloz-sazu" type="button">
-                        Sozaložništvo SAZU
-
-                    </button>
-
 
                 </div>
 
+                <!-- =====================================
+             SPLOŠNO SUBMENU
+        ====================================== -->
+
+                <div class="subcategory-wrapper" id="splosnoSubmenu" aria-hidden="true">
+
+                    <div class="subcategory-heading">
+                        Splošno
+                    </div>
+
+
+                    <div class="filter-buttons subcategory-buttons">
+
+
+                        <button class="filter subcategory" data-subcategory="letopis" type="button">
+                            Letopis SAZU
+                        </button>
+
+                    </div>
+                </div>
 
                 <!-- =====================================
              RAZREDI SAZU SUBMENU
@@ -337,32 +331,32 @@
                     <div class="filter-buttons subcategory-buttons">
 
 
-                        <button class="filter subcategory" data-subcategory="I. razred" type="button">
+                        <button class="filter subcategory" data-subcategory="irazred" type="button">
                             I. Razred za zgodovinske in družbene vede
                         </button>
 
 
-                        <button class="filter subcategory" data-subcategory="II. razred" type="button">
+                        <button class="filter subcategory" data-subcategory="iirazred" type="button">
                             II. Razred za filološke in literarne vede
                         </button>
 
 
-                        <button class="filter subcategory" data-subcategory="III. razred" type="button">
-                            III. Razred za matematične, fizikalne, kemijske in tehniške vede
+                        <button class="filter subcategory" data-subcategory="iiirazred" type="button">
+                            III. razred za matematične, fizikalne, kemijske in tehniške vede
                         </button>
 
 
-                        <button class="filter subcategory" data-subcategory="IV. razred" type="button">
+                        <button class="filter subcategory" data-subcategory="ivrazred" type="button">
                             IV. Razred za naravoslovne vede
                         </button>
 
 
-                        <button class="filter subcategory" data-subcategory="V. razred" type="button">
+                        <button class="filter subcategory" data-subcategory="vrazred" type="button">
                             V. Razred za umetnosti
                         </button>
 
 
-                        <button class="filter subcategory" data-subcategory="VI. razred" type="button">
+                        <button class="filter subcategory" data-subcategory="virazred" type="button">
                             VI. Razred za medicinske vede
                         </button>
 
@@ -385,17 +379,17 @@
                     <div class="filter-buttons subcategory-buttons">
 
 
-                        <button class="filter subcategory" data-subcategory="razprave I." type="button">
+                        <button class="filter subcategory" data-subcategory="razpravei" type="button">
                             Razprave I. Razreda za zgodovinske in družbene vede
                         </button>
 
 
-                        <button class="filter subcategory" data-subcategory="razprave II." type="button">
+                        <button class="filter subcategory" data-subcategory="razpraveii" type="button">
                             Razprave II. Razreda za filološke in literarne vede
                         </button>
 
 
-                        <button class="filter subcategory" data-subcategory="razprave V." type="button">
+                        <button class="filter subcategory" data-subcategory="razpravev" type="button">
                             Razprave V. Razreda za umetnosti
                         </button>
 
@@ -415,42 +409,6 @@
 
                 </div>
 
-
-                <!-- =====================================
-             SERIJE SAZU SUBMENU
-        ====================================== -->
-
-                <div class="subcategory-wrapper" id="serije-sazuSubmenu" aria-hidden="true">
-
-                    <div class="subcategory-heading">
-                        Serijske publikacije SAZU
-                    </div>
-
-
-                    <div class="filter-buttons subcategory-buttons">
-
-
-                        <button class="filter subcategory" data-subcategory="fagopyrum" type="button">
-                            Fagopyrum
-                        </button>
-
-
-                        <button class="filter subcategory" data-subcategory="folia" type="button">
-                            Folia Biologica et Geologica
-                        </button>
-
-
-                        <button class="filter subcategory" data-subcategory="letopis" type="button">
-                            Letopis SAZU
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-                </div>
-
             </section>
 
 
@@ -462,7 +420,7 @@
             ================================== -->
 
                 <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
-                    data-subcategory="I. razred, razprave I." data-year="2025" data-order="1"
+                    data-subcategory="irazred, razpravei" data-year="2025" data-order="1"
                     data-title="Historična topografija predjožefinskih župnij na Slovenskem. Kranjska"
                     data-author="Janez Höfler" data-other-authors="" data-collection="Razprave I., 44"
                     data-isbn="978-961-268-113-5" data-cobiss-id="238873091"
@@ -519,7 +477,7 @@
             ================================== -->
 
                 <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
-                    data-subcategory="I. razred, razprave I." data-year="2024"
+                    data-subcategory="irazred, razpravei" data-year="2024"
                     data-title="Zbornik ob stoletnici rojstva akademika profesorja dr. Vasilija Melika"
                     data-author="Rok Stergar, Marko Štuhec, Peter Vodopivec"
                     data-other-authors="Peter Vodopivec, Rok Stergar, Irena Gantar Godina, Birgitta Bader Zaar, Marta Verginella, Irena Selišnik, Miroslav Stiplovšek, Darja Mihelič, Branko Šuštar, Vincenc Rajšp, Ignacij Voje, Dušan Nečak, Franc Rozman Feliks"
@@ -627,7 +585,7 @@
             ================================== -->
 
                 <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
-                    data-subcategory="I. razred, razprave I." data-year="2025" data-order="2"
+                    data-subcategory="irazred, razpravei" data-year="2025" data-order="2"
                     data-title="Omnia tempus revelat: Studies on Antiquity and the Early Middle Ages. In Memory of Jaroslav Šašel"
                     data-author="Milan Lovenjak, Alenka Cedilnik, Andrej Gaspari, Jana Horvat"
                     data-other-authors="Aleš Maver, Robert Matijašić, Renate Lafer, Amra Šačić Beća, Mitja Guštin, Jana Horvat, Andrej Gaspari, Žan Špendal, Inga Vologorac Brčić, Bojan Djurić, Ana Kruh, Andrej Šemrov, Vesna Tratnik, Janka Istenič, Slavko Ciglenečki, Alenka Cedilnik, Hrvoje Gračanin, Zvezdana Modrijan, Aljaž Sekne, Tina Milavec"
@@ -683,7 +641,7 @@
             ================================== -->
 
                 <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
-                    data-subcategory="II. razred, razprave II." data-year="2026"
+                    data-subcategory="iirazred, razpraveii" data-year="2026"
                     data-title="Elementi slovenske moderne književnosti: Razprave ob stoletnici rojstva akad. Franca Zadravca"
                     data-author="Tomaž Toporišič"
                     data-other-authors="Marko Snoj, Marko Juvan, Zvonko Kovač, Peter Scherber, Andrej Leben, Miran Hladnik, Marija Stanonik, Tomo Virk, Jožica Čeh Steger, Igor Maver, Alojzija Zupan Sosič, Tomaž Toporišič, Andraž Jež, Marjana Benčina, Anka Sollner Perdih"
@@ -740,8 +698,8 @@
             ================================== -->
 
                 <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
-                    data-subcategory="II. razred, razprave II." data-year="2022"
-                    data-title="Novi pogledi na Adama Bohoriča" data-author="Marko Jesenšek"
+                    data-subcategory="iirazred, razpraveii" data-year="2022" data-title="Novi pogledi na Adama Bohoriča"
+                    data-author="Marko Jesenšek"
                     data-other-authors="Milček Komelj, Klaudija Sedar, Marko Snoj, Boris Golec, Janko Kos, Kajetan Gantar, Kozma Ahačič, Majda Merše, Andreja Legan Ravnikar, Metod Čepar, Alenka Jelovšek, Irena Orel, Andreja Žele, Luka Vidmar, Mitja Trojar, Marko Jesenšek, Tomaž Svete, Franci Pivec, Jakob Müller, Vincenc Rajšp, Nina Ditmajer, Marija Stanonik, Nina Horvat, Franci Just, Fanika Krajnc Vrečko"
                     data-collection="Razprave II., 26" data-isbn="978-961-268-085-5" data-cobiss-id="104202499"
                     data-keywords="slovenski protestanti, biografije, slovensko jezikoslovje, Bohorič, Adam, protestantizem, slovenska književnost, literarna zgodovina, slovenščina">
@@ -793,7 +751,7 @@
                  BOOK 7
             ================================== -->
 
-                <article class="book-card" data-category="razredi-sazu" data-subcategory="IV. razred" data-year="2020"
+                <article class="book-card" data-category="razredi-sazu" data-subcategory="ivrazred" data-year="2020"
                     data-title="Zgodovina slovenskega agrarnega prebivalstva" data-author="Jože Maček"
                     data-other-authors="" data-collection="" data-isbn="978-961-268-067-1 " data-cobiss-id="304437248"
                     data-keywords="Slovenci, zgodovina, kmetje, kmetijstvo, socialna zgodovina, ekonomska zgodovina">
@@ -845,7 +803,7 @@
             ================================== -->
 
                 <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
-                    data-subcategory="V. razred, razprave V." data-year="2026"
+                    data-subcategory="vrazred, razpravev" data-year="2026"
                     data-title="Alojz Rebula: Slovenec med zgodovino in nadčasnim" data-author="Brane Senegačnik"
                     data-other-authors="Marko Snoj, Vinko Ošlak, Sergij Pahor, Janko Kos, Tomaž Simčič, Mojca Petaros, Irena Avsenik Nabergoj, Anja Božič, Jan Dominik Bogataj, Jadranka Cergol, Marko Marinčič, David Movrin, Martina Ožbolt, Vilma Purič, Brane Senegačnik, Marija Stanonik, David Bandelj, Jože Faganel, Erika Jazbar, Milček Komelj, Maja Lapornik, Aleš Maver, Igor Škamperle, Matej Venier, Martin Grum, Matija Ogrin, Alen Širca"
                     data-collection="Razprave V., 2" data-isbn="978-961-268-131-9" data-cobiss-id="277397251"
@@ -900,7 +858,7 @@
             ================================== -->
 
                 <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
-                    data-subcategory="V. razred, razprave V." data-year="2023"
+                    data-subcategory="vrazred, razpravev" data-year="2023"
                     data-title="Simčičev zbornik: ob stoletnici rojstva" data-author="Jožef Muhovič"
                     data-other-authors="Peter Štih, Andrej Jemec, Vladimir Kos, Marko Snoj, Kajetan Gantar, Marko Sušnik, Milček Komelj, Matevž Kos, Marija Stanonik, Brane Senegačnik, Matija Ogrin, Miklavž Komelj, Marjana Benčina, Drago Jančar, Vid Snoj"
                     data-collection="Razprave V., 1" data-isbn="978-961-268-096-1" data-cobiss-id="163416067"
@@ -982,7 +940,7 @@
 
                 </article>
 
-                <article class="book-card" data-category="serije-sazu" data-subcategory="folia" data-year="2009"
+                <article class="book-card" data-category="razredi-sazu" data-subcategory="ivrazred" data-year="2009"
                     data-title="Folia Biologica et Geologica Letn. 50 Št. 1" data-author="Mitja Zupančič"
                     data-other-authors="Marko Acceto, Igor Dakskobler, Brane Anderle, Branko Vreš, Mateja Germ, Gorazd Kosi, Mitja Zupančič, Vinko Žagar"
                     data-collection="Folia Biologica et Geologica" data-isbn="1855-7996" data-cobiss-id="248490496"
@@ -1034,377 +992,1153 @@
                     data-title="Acta Carsologica" data-author="" data-other-authors=""
                     data-collection="Acta Carsologica" data-isbn="" data-cobiss-id="3798016"
                     data-keywords="Kras, geologija, Slovenija, periodični zborniki">
-
                     <a href="https://ojs.zrc-sazu.si/carsologica/issue/archive" class="book-link" target="_blank"
                         rel="noopener">
-
                         <div class="book-icon">
-
                             <img src="images/Sozaloznistvo/AC.jpg" alt="Naslovnica knjige Acta Carsologica">
-
                         </div>
-
-
                         <div class="book-content">
-
                             <p class="book-series">
                                 Acta Carsologica
                             </p>
-
-
                             <h3>
                                 Acta Carsologica
                             </h3>
-
-
                             <p class="book-author">
-
                             </p>
-
-
                             <p class="book-year">
                                 1998-
                             </p>
-
                         </div>
-
-
                         <span class="arrow">
                             →
                         </span>
-
                     </a>
-
                 </article>
 
                 <article class="book-card" data-category="serije-zrcsazu" data-year="0" data-order="4"
                     data-title="Acta Geographica Slovenica" data-author="" data-other-authors=""
                     data-collection="Acta Geographica Slovenica" data-isbn="1581-6613" data-cobiss-id="124775936"
                     data-keywords="Geografija, periodika">
-
                     <a href="https://ojs.zrc-sazu.si/ags/issue/archive" class="book-link" target="_blank"
                         rel="noopener">
-
                         <div class="book-icon">
-
                             <img src="images/Sozaloznistvo/AGS.jpg" alt="Naslovnica knjige Acta Geographica Slovenica">
-
                         </div>
-
-
                         <div class="book-content">
-
                             <p class="book-series">
                                 Acta Geographica Slovenica
                             </p>
-
-
                             <h3>
                                 Acta Geographica Slovenica
                             </h3>
-
-
                             <p class="book-author">
-
                             </p>
-
-
                             <p class="book-year">
                                 1952-
                             </p>
-
                         </div>
-
-
                         <span class="arrow">
                             →
                         </span>
-
                     </a>
-
                 </article>
 
                 <article class="book-card" data-category="serije-zrcsazu" data-year="0" data-order="3"
                     data-title="Arheološki vestnik" data-author="" data-other-authors=""
                     data-collection="Arheološki vestnik" data-isbn="0570-8966" data-cobiss-id="6431490"
                     data-keywords="arheologija, arheološke najdbe">
-
                     <a href="https://ojs.zrc-sazu.si/av/issue/archive" class="book-link" target="_blank" rel="noopener">
-
                         <div class="book-icon">
-
                             <img src="images/Sozaloznistvo/AV.jpg" alt="Naslovnica knjige Arheološki vestnik">
-
                         </div>
-
-
                         <div class="book-content">
-
                             <p class="book-series">
                                 Arheološki vestnik
                             </p>
-
-
                             <h3>
                                 Arheološki vestnik
                             </h3>
-
-
                             <p class="book-author">
-
                             </p>
-
-
                             <p class="book-year">
                                 1950-
                             </p>
-
                         </div>
-
-
                         <span class="arrow">
                             →
                         </span>
-
                     </a>
-
                 </article>
 
                 <article class="book-card" data-category="serije-zrcsazu" data-year="0" data-order="2"
                     data-title="Filozofski vestnik" data-author="" data-other-authors=""
                     data-collection="Filozofski vestnik" data-isbn="0353-4510" data-cobiss-id="8558080"
                     data-keywords="družbene vede, filozofija">
-
                     <a href="https://ojs.zrc-sazu.si/filozofski-vestnik/issue/archive" class="book-link" target="_blank"
                         rel="noopener">
-
                         <div class="book-icon">
-
                             <img src="images/Sozaloznistvo/FV.jpg" alt="Naslovnica knjige Filozofski vestnik">
-
                         </div>
-
-
                         <div class="book-content">
-
                             <p class="book-series">
                                 Filozofski vestnik
                             </p>
-
-
                             <h3>
                                 Filozofski vestnik
                             </h3>
-
-
                             <p class="book-author">
-
                             </p>
-
-
                             <p class="book-year">
                                 1980-
                             </p>
-
                         </div>
-
-
                         <span class="arrow">
                             →
                         </span>
-
                     </a>
-
                 </article>
 
                 <article class="book-card" data-category="serije-zrcsazu" data-year="0" data-order="1"
                     data-title="Traditiones" data-author="" data-other-authors="" data-collection="Traditiones"
                     data-isbn="0352-0447" data-cobiss-id="16175874" data-keywords="etnografija, slovenska književnost">
-
                     <a href="https://ojs.zrc-sazu.si/traditiones/issue/archive" class="book-link" target="_blank"
                         rel="noopener">
-
                         <div class="book-icon">
-
                             <img src="images/Sozaloznistvo/TRAD.jpg" alt="Naslovnica knjige Traditiones">
-
                         </div>
-
-
                         <div class="book-content">
-
                             <p class="book-series">
                                 Traditiones
                             </p>
-
-
                             <h3>
                                 Traditiones
                             </h3>
-
-
                             <p class="book-author">
-
                             </p>
-
-
                             <p class="book-year">
                                 1972-
                             </p>
-
                         </div>
-
-
                         <span class="arrow">
                             →
                         </span>
-
                     </a>
-
                 </article>
 
-                <article class="book-card" data-category="serije-sazu" data-subcategory="letopis" data-year="2025"
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="2025"
                     data-title="Letopis Slovenske akademije znanosti in umetnosti 75/2024"
                     data-author="Franc Forstnerič, Peter Štih, Tatjana Avšič - Županc, Marko Snoj" data-other-authors=""
                     data-collection="Letopis SAZU" data-isbn="0374-0315" data-cobiss-id="340237"
                     data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
-
                     <a href="https://www.sazu.si/uploads/files/publikacije24/letopis_2024_internet_mali.pdf"
                         class="book-link" target="_blank" rel="noopener">
-
                         <div class="book-icon">
-
-                            <img src="images/Letopis/L75.jpg" alt="Naslovnica knjige Letopis 75">
-
+                            <img src="images/letopis/L75.jpg" alt="Naslovnica knjige Letopis 75">
                         </div>
-
-
                         <div class="book-content">
-
                             <p class="book-series">
                                 Letopis SAZU
                             </p>
-
-
                             <h3>
                                 Letopis Slovenske akademije znanosti in umetnosti 75/2024
                             </h3>
-
-
                             <p class="book-author">
                                 Franc Forstnerič (ur.), Peter Štih (ur.), Tatjana Avšič - Županc (ur.), Marko Snoj (ur.)
                             </p>
-
-
                             <p class="book-year">
                                 2025
                             </p>
-
                         </div>
-
-
                         <span class="arrow">
                             →
                         </span>
-
                     </a>
-
                 </article>
 
-                <article class="book-card" data-category="serije-sazu" data-subcategory="fagopyrum" data-year="2026"
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1943"
+                    data-order="" data-title="Letopis Akademije znanosti in umetnosti v Ljubljani 1, 1938-1942"
+                    data-author="Fran Ramovš" data-other-authors="" data-collection="Letopis SAZU" data-isbn="1408-5062"
+                    data-cobiss-id="1528629" data-keywords="Akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-FHJF9DZK" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis1.webp" alt="Naslovnica knjige Letopis 1">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Akademije znanosti in umetnosti v Ljubljani 1/1938-1942
+                            </h3>
+                            <p class="book-author">
+                                Fran Ramovš (ur.)
+                            </p>
+                            <p class="book-year">
+                                1943
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1947"
+                    data-order="" data-title="Letopis Akademije znanosti in umetnosti v Ljubljani 2, 1943-1947"
+                    data-author=" " data-other-authors="France Kidrič" data-collection="Letopis SAZU"
+                    data-isbn="1408-5062" data-cobiss-id="1528629"
+                    data-keywords="Akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-RCUYJEYS" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis2.webp" alt="Naslovnica knjige Letopis 2">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Akademije znanosti in umetnosti v Ljubljani 2/1943-1947
+                            </h3>
+                            <p class="book-author">
+
+                            </p>
+                            <p class="book-year">
+                                1947
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1950"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 3, 1948-1949"
+                    data-author="" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-21EKSMO9" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis3.webp" alt="Naslovnica knjige Letopis 3">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 3/1948-1949
+                            </h3>
+                            <p class="book-author">
+
+                            </p>
+                            <p class="book-year">
+                                1950
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1952"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 4, 1950-1951"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-JKHFDLDK" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis4.webp" alt="Naslovnica knjige Letopis 4">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 4/1950-1951
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1952
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1954"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 5, 1952-1953"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-ELSGN6RX" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis5.webp" alt="Naslovnica knjige Letopis 5">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 5/1952-1953
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1954
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1955"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 6, 1954"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-RW4QOA16" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis6.webp" alt="Naslovnica knjige Letopis 6">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 6/1954
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1955
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1957"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 7, 1955"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-BXAAR6IG" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis7.webp" alt="Naslovnica knjige Letopis 7">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 7/1955
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1957
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1958"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 8, 1956-1957"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-NWASMZ5G" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis8.webp" alt="Naslovnica knjige Letopis 8">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 8/1956-1957
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1958
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1959"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 9, 1958"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-EJYZF5JJ" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis9.webp" alt="Naslovnica knjige Letopis 9">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 9/1958
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1959
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1960"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 10, 1959"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-BU5LNPJW" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis10.webp" alt="Naslovnica knjige Letopis 10">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 10/1959
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1960
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1961"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 11, 1960"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-YXV9YXGM" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis11.webp" alt="Naslovnica knjige Letopis 11">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 11/1960
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1961
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1962"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 12, 1961"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-20T0ANVB" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis12.webp" alt="Naslovnica knjige Letopis 12">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 12/1961
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1962
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1963"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 13, 1962"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-OJOYDIAJ" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis13.webp" alt="Naslovnica knjige Letopis 13">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 13/1962
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1963
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1964"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 14, 1963"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-XCQVC7DW" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis14.webp" alt="Naslovnica knjige Letopis 14">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 14/1963
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1964
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1965"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 15, 1964"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-WR05FIBC" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis15.webp" alt="Naslovnica knjige Letopis 15">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 15/1964
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1965
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1966"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 16, 1965"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-MVFCCATC" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis16.webp" alt="Naslovnica knjige Letopis 16">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 16/1965
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1966
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1967"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 17, 1966"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-IVD2VCNO" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis17.webp" alt="Naslovnica knjige Letopis 17">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 17/1966
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1967
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1968"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 18, 1967"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-7W5IR1JT" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis18.webp" alt="Naslovnica knjige Letopis 18">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 18/1967
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1968
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1969"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 19, 1968"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-BPJ1JDR4" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis19.webp" alt="Naslovnica knjige Letopis 19">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 19/1968
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1969
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1970"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 20, 1969"
+                    data-author="Milko Kos" data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315"
+                    data-cobiss-id="340237" data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-IT5CIEGO" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis20.webp" alt="Naslovnica knjige Letopis 20">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 20/1969
+                            </h3>
+                            <p class="book-author">
+                                Milko Kos (ur.)
+                            </p>
+                            <p class="book-year">
+                                1970
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1971"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 21, 1970" data-author=""
+                    data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315" data-cobiss-id="340237"
+                    data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-8WPKYKLU" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis21.webp" alt="Naslovnica knjige Letopis 21">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 21/1970
+                            </h3>
+                            <p class="book-author">
+                            </p>
+                            <p class="book-year">
+                                1971
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1972"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 22, 1971" data-author=""
+                    data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315" data-cobiss-id="340237"
+                    data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-TSBKOJUC" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis22.webp" alt="Naslovnica knjige Letopis 22">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 22/1971
+                            </h3>
+                            <p class="book-author">
+                            </p>
+                            <p class="book-year">
+                                1972
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1973"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 23, 1972" data-author=""
+                    data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315" data-cobiss-id="340237"
+                    data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-XV9BQA91" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis23.webp" alt="Naslovnica knjige Letopis 23">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 23/1972
+                            </h3>
+                            <p class="book-author">
+                            </p>
+                            <p class="book-year">
+                                1973
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1974"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 24, 1973" data-author=""
+                    data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315" data-cobiss-id="340237"
+                    data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-QERELAOU" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis24.webp" alt="Naslovnica knjige Letopis 24">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 24/1973
+                            </h3>
+                            <p class="book-author">
+                            </p>
+                            <p class="book-year">
+                                1974
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1975"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 25, 1974" data-author=""
+                    data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315" data-cobiss-id="340237"
+                    data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-NDSEFAWN" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis25.webp" alt="Naslovnica knjige Letopis 25">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 25/1974
+                            </h3>
+                            <p class="book-author">
+                            </p>
+                            <p class="book-year">
+                                1975
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1976"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 26, 1975" data-author=""
+                    data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315" data-cobiss-id="340237"
+                    data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-DYBVVQLF" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis26.webp" alt="Naslovnica knjige Letopis 26">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 26/1975
+                            </h3>
+                            <p class="book-author">
+                            </p>
+                            <p class="book-year">
+                                1976
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1977"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 27, 1976" data-author=""
+                    data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315" data-cobiss-id="340237"
+                    data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-F60FKRJT" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis27.webp" alt="Naslovnica knjige Letopis 27">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 27/1976
+                            </h3>
+                            <p class="book-author">
+                            </p>
+                            <p class="book-year">
+                                1977
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1978"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 28, 1977" data-author=""
+                    data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315" data-cobiss-id="340237"
+                    data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-DDAYNLCV" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis28.webp" alt="Naslovnica knjige Letopis 28">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 28/1977
+                            </h3>
+                            <p class="book-author">
+                            </p>
+                            <p class="book-year">
+                                1978
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1979"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 29, 1978" data-author=""
+                    data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315" data-cobiss-id="340237"
+                    data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-AF2KEREB" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis29.webp" alt="Naslovnica knjige Letopis 29">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 29/1978
+                            </h3>
+                            <p class="book-author">
+                            </p>
+                            <p class="book-year">
+                                1979
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1980"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 30, 1979" data-author=""
+                    data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315" data-cobiss-id="340237"
+                    data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-JUILXXF2" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis30.webp" alt="Naslovnica knjige Letopis 30">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 30/1979
+                            </h3>
+                            <p class="book-author">
+                            </p>
+                            <p class="book-year">
+                                1980
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+                <article class="book-card" data-category="splosno" data-subcategory="letopis" data-year="1981"
+                    data-order="" data-title="Letopis Slovenske akademije znanosti in umetnosti 31, 1980" data-author=""
+                    data-other-authors="" data-collection="Letopis SAZU" data-isbn="0374-0315" data-cobiss-id="340237"
+                    data-keywords="Slovenska akademija znanosti in umetnosti, letopisi">
+
+                    <a href="https://www.dlib.si/details/URN:NBN:SI:DOC-CELX2B2K" class="book-link" target="_blank"
+                        rel="noopener">
+                        <div class="book-icon">
+                            <img src="images/letopis/letopis31.webp" alt="Naslovnica knjige Letopis 31">
+                        </div>
+                        <div class="book-content">
+                            <p class="book-series">
+                                Letopis SAZU
+                            </p>
+                            <h3>
+                                Letopis Slovenske akademije znanosti in umetnosti 31/1980
+                            </h3>
+                            <p class="book-author">
+                            </p>
+                            <p class="book-year">
+                                1981
+                            </p>
+                        </div>
+                        <span class="arrow">
+                            →
+                        </span>
+                    </a>
+                </article>
+
+
+
+
+
+
+
+                <article class="book-card" data-category="razredi-sazu" data-subcategory="ivrazred" data-year="2026"
                     data-title="Fagopyrum Letn. 43 Št. 2" data-author=""
                     data-other-authors="Dmytro Chuiko, Vladyslav Stryzhak, Oleh Tryhub, Blanka Vombergar"
                     data-collection="Fagopyrum" data-isbn="2712-2859" data-cobiss-id="43919149"
                     data-keywords="ajda, poljščine">
-
                     <a href="https://ojs.sazu.si/fagopyrum/issue/view/728" class="book-link" target="_blank"
                         rel="noopener">
-
                         <div class="book-icon">
-
                             <img src="images/Fagopyrum/F43-2.jpg" alt="Naslovnica knjige Fagopyrum F43-2">
-
                         </div>
-
-
                         <div class="book-content">
-
                             <p class="book-series">
                                 Fagopyrum
                             </p>
-
-
                             <h3>
                                 Fagopyrum Letn. 43 Št. 2
                             </h3>
-
-
                             <p class="book-author">
-
                             </p>
-
-
                             <p class="book-year">
                                 2026
                             </p>
-
                         </div>
-
-
                         <span class="arrow">
                             →
                         </span>
-
                     </a>
-
                 </article>
 
-                <article class="book-card" data-category="serije-sazu" data-subcategory="fagopyrum" data-year="1981"
+                <article class="book-card" data-category="razredi-sazu" data-subcategory="ivrazred" data-year="1981"
                     data-title="Fagopyrum Letn. 1" data-author="Ivan Kreft"
                     data-other-authors="Krystyna Kusiorska, Teresa Koszykowska, Adachi, Irie, Yabuya, Nagatomo, Kajimoto, Kawabata"
                     data-collection="Fagopyrum" data-isbn="2712-2859" data-cobiss-id="7617282"
                     data-keywords="navadna ajda, poljščine">
-
                     <a href="https://www.sazu.si/uploads/files/Fagopyrum1-30/Fagopyrum_1_Buckweat%20newsletter%20vol.%201,%20Lj,%201981.pdf"
                         class="book-link" target="_blank" rel="noopener">
-
                         <div class="book-icon">
-
                             <img src="images/Fagopyrum/F1.jpg" alt="Naslovnica knjige Fagopyrum F1">
 
                         </div>
-
-
                         <div class="book-content">
-
                             <p class="book-series">
                                 Fagopyrum
                             </p>
-
-
                             <h3>
                                 Fagopyrum Letn. 1
                             </h3>
-
-
                             <p class="book-author">
-
                             </p>
-
-
                             <p class="book-year">
                                 1981
                             </p>
-
                         </div>
-
-
                         <span class="arrow">
                             →
                         </span>
-
                     </a>
-
                 </article>
 
                 <article class="book-card" data-category="splosno" data-year="2023"
@@ -1412,47 +2146,29 @@
                     data-other-authors="" data-collection="Splošno" data-isbn="978-961-268-097-8"
                     data-cobiss-id="168704003"
                     data-keywords="znanstvene ustanove, akademije, slovenija, Slovenska akademija znanosti in umetnosti">
-
                     <a href="https://www.sazu.si/uploads/files/publikacije24/sazuprelom-press.pdf" class="book-link"
                         target="_blank" rel="noopener">
-
                         <div class="book-icon">
-
                             <img src="images/Splosno/SAZUB.jpg" alt="Naslovnica knjige SAZU Brošura">
-
                         </div>
-
-
                         <div class="book-content">
-
                             <p class="book-series">
                                 Brošura
                             </p>
-
-
                             <h3>
                                 Slovenska akademija znanosti in umetnosti
                             </h3>
-
-
                             <p class="book-author">
                                 Peter Štih (ur.), Milček Komelj (ur.), Marko Snoj (ur.)
                             </p>
-
-
                             <p class="book-year">
                                 2023
                             </p>
-
                         </div>
-
-
                         <span class="arrow">
                             →
                         </span>
-
                     </a>
-
                 </article>
 
 
@@ -1465,38 +2181,28 @@
                     data-other-authors="Matej Accetto, Marko Bošnjak, Mile Dolenc, Primož Gorkič, Andreja Krabonja, Sebastian Nerad, Aleš Novak, Marijan Pavčnik, Grega Strban, Jure Vidmar"
                     data-collection="Izšlo s pomočjo SAZU" data-isbn="978-961-247-497-3" data-cobiss-id="110790915"
                     data-keywords="pravo, metodologija, zborniki, razlaga pravnih aktov">
-
                     <a class="book-link" role="button" tabindex="0" aria-expanded="false"
                         aria-controls="pravnePanogeOverlay">
-
                         <div class="book-icon">
                             <img src="images/S pomocjo sazu/pravne-panoge.png" alt="Naslovnica knjige Pravne panoge">
                         </div>
-
                         <div class="book-content">
-
                             <p class="book-series">
                                 Izšlo s pomočjo SAZU
                             </p>
-
                             <h3>
                                 Pravne panoge in metodologija razlage prava
                             </h3>
-
                             <p class="book-author">
                                 Aleš Novak (ur.), Marijan Pavčnik (ur.)
                             </p>
-
                             <p class="book-year">
                                 2022
                             </p>
-
                         </div>
-
                     </a>
 
                     <div class="book-overlay" id="pravnePanogeOverlay">
-
                         <p>
                             Pravniki se že dolgo zavedamo, da razlaga pravnih besedil ni povsem enovita. Način,
                             kako k razlagi pristopamo, ne bo odvisen samo od posameznega sodnika ali
@@ -1512,7 +2218,6 @@
                             Evropske konvencije za človekove pravice. Razlaga prava ni samo razlaga besedila,
                             je tudi upoštevanje (pravnega in kulturnega) konteksta.
                         </p>
-
                         <p>
                             Pričujoča zbirka razprav skuša osvetliti prav ta vidik razlage prava. Avtorji svojih
                             prispevkih opozorijo na posebnosti razlage prava v različnih pravnih panogah, kot so
@@ -1525,13 +2230,10 @@
                             razumevanje posebnosti razlag na določenih pravnih področij, pa tudi za tiste, ki bi
                             želeli na razlago v pravu pogledati z drugačnega zornega kota.
                         </p>
-
                         <p>
                             Založila: Ljubljana: Lexpera
                         </p>
-
                     </div>
-
                 </article>
 
                 <article class="book-card" data-category="zbirke-sazu" data-subcategory="objave, bibliografije"
@@ -1995,7 +2697,7 @@
                                 Biblioteka 11
                             </p>
                             <h3>
-                                Bibliografije članov Slovenske akademije znanosti in umetnosti. III. razred:
+                                Bibliografije članov Slovenske akademije znanosti in umetnosti. iiirazred:
                                 matematične, fizikalne in tehniške vede</h3>
                             <p class="book-author">
                                 France Bernik (ur.), Marija Fabjančič (ur.)
@@ -2361,7 +3063,7 @@
                 </article>
 
                 <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
-                    data-subcategory=" II. razred, razprave II." data-year="2024" data-order="1"
+                    data-subcategory=" iirazred, razpraveii" data-year="2024" data-order="1"
                     data-title="Dajnkova monografija" data-author="Marko Jesenšek"
                     data-other-authors="Marko Snoj, Marjeta Ciglenečki, Vincenc Rajšp, Igor Žiberna, miran Puconja, Vinko Škafar, Marko Jesenšek, Irena Orel, Natalija Ulčnik, Nina Ditmajer, Mihaela Koletnik, Vesna Mikolič, Diana Košir, Franci Just, Jelka Pšajd, Nina Zver, Katja Peršak Hajdinjak"
                     data-collection="Razprave II., 30" data-isbn="978-961-268-100-5" data-cobiss-id="199916035"
@@ -2393,7 +3095,7 @@
                 </article>
 
                 <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
-                    data-subcategory=" II. razred, razprave II." data-year="2024" data-order="3"
+                    data-subcategory=" iirazred, razpraveii" data-year="2024" data-order="3"
                     data-title="Monografija Števana Küzmiča: Ob tristoletnici rojstva" data-author="Marko Jesenšek"
                     data-other-authors="Marko Snoj, Vincenc Rajšp, Nina Ditmajer, Fanika Krajnc - Vrečko, Irena Avsenik Nabergoj, Diana Košir, Vesna Mikolič, Vlado Nartnik, Nina Zver, Marko Jesenšek, Franci Just, Klaudija Sedar, Mirko Bratuša, Akoš Anton Dončec"
                     data-collection="Razprave II., 32" data-isbn="978-961-268-104-3" data-cobiss-id="202495747"
@@ -2425,7 +3127,7 @@
                 </article>
 
                 <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
-                    data-subcategory=" II. razred, razprave II." data-year="2024" data-order="2"
+                    data-subcategory=" iirazred, razpraveii" data-year="2024" data-order="2"
                     data-title="Od Svetinove Metke do Visoške kronike: Znanstvene razprave ob stoletnici smrti Josipa Stritarja in Ivana Tavčarja"
                     data-author="Tomo Virk"
                     data-other-authors="Marko Snoj, Boris A. Novak, Katja Mihurko, Tone Smolej, Tomaž Toporišič, Alen Širca, Marko Juvan, Marija Stanonik, Marijan Dović, Vanesa Matajc, Janko Kos, Tomo Virk"
@@ -2459,7 +3161,7 @@
                 </article>
 
                 <article class="book-card" data-category="razredi-sazu, zbirke-sazu"
-                    data-subcategory=" II. razred, razprave II." data-year="2020" data-order=""
+                    data-subcategory=" iirazred, razpraveii" data-year="2020" data-order=""
                     data-title="Matija Murko – slovanski filolog v najširšem pomenu besede" data-author="Marko Jesenšek"
                     data-other-authors="Marko Snoj, Andreas Golob, Igor Grdina, Gerhard, Neweklowsky, Ivo Pospišil, Miloš Zelenka, Alenka Jensterle Doležal, Kajetan Gantar, Blaž Zabel, Rajka Glušica, Vincenc Rajšp, Ivana Eterović, Alojz Jembrih, Marjetka Golež Kaučič, Ingrid Slavec Gradišnik, Drago Kunej, Branko Šuštar, Ignacij Voje, Marko Jesenšek, Andreja Žele, Marija Stanonik"
                     data-collection="Razprave II.,24" data-isbn="978-961-268-069-5" data-cobiss-id="21628931"
